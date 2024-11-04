@@ -1,6 +1,13 @@
 <template>
-  <view>
-    123123
+  <view :style="customStyle" class="card">
+    <view v-if="title" class="title">
+      <view class="title_header">
+        <view class="text">{{ title }}</view>
+      </view>
+    </view>
+    <view :style="{gap: `${gutter}rpx`}" class="content">
+      <slot></slot>
+    </view>
   </view>
 </template>
 <script>
@@ -8,6 +15,14 @@ export default {
   name: "DefaultCard",
   computed: {},
   components: {},
+  props: {
+    title: {
+      type: String,
+      default: ''
+    },
+    gutter: 0,
+    customStyle: ''
+  },
   data() {
     return {};
   },
