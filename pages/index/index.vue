@@ -1,15 +1,14 @@
 <template>
   <view class="content">
-		<u-navbar
-				title="个人中心"
-				:autoBack="true"
-		>
-		</u-navbar>
-		<u-icon name="chat"></u-icon>
-
-		<DefaultCard>
-	  123123
-	</DefaultCard>
+    <u-navbar
+      :autoBack="true"
+      title="个人中心"
+    >
+    </u-navbar>
+    <u-icon name="chat"></u-icon>
+    <DefaultCard>
+      123123
+    </DefaultCard>
   </view>
 </template>
 
@@ -19,9 +18,9 @@ import DefaultCard from "../../components/DefaultCard.vue";
 export default {
   components: {DefaultCard},
   data() {
-	return {
-	  title: ''
-	}
+    return {
+      title: ''
+    }
   },
   onLoad() {
 
