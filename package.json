@@ -3,5 +3,10 @@
   "version": "1.0.0",
   "repository": "https://github.com/caojiahai/yl-uniapp-ui.git",
   "dependencies": {
+    "uview-ui": "^2.0.37"
+  },
+  "devDependencies": {
+    "sass": "^1.81.0",
+    "sass-loader": "^10.5.2"
   }
 }

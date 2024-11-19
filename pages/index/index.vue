@@ -1,6 +1,13 @@
 <template>
   <view class="content">
-	<DefaultCard>
+		<u-navbar
+				title="个人中心"
+				:autoBack="true"
+		>
+		</u-navbar>
+		<u-icon name="chat"></u-icon>
+
+		<DefaultCard>
 	  123123
 	</DefaultCard>
   </view>
