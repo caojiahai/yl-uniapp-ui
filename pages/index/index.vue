@@ -7,14 +7,7 @@
     >
     </u-navbar>
     <view style="margin-top: 44px">
-      <yl-sort-filter title="排序"/>
-      <yl-select-filter
-        :item-list="planSelectFilter"
-        @confirm="confirmSelect"
-      />
-      <yl-default-card title="标题标题标题标题标题标题标题标题标题标题标题标题标题标题">
-        <view>12321</view>
-      </yl-default-card>
+      
     </view>
   </view>
 </template>

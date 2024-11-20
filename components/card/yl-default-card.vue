@@ -1,5 +1,5 @@
 <template>
-  <view class="yl-default-card">
+  <view :style="{ padding: noPadding ? 0 : '24rpx' }" class="yl-default-card">
     <view v-if="title" class="card-title">{{ title }}</view>
     <slot></slot>
   </view>
@@ -11,6 +11,7 @@ export default {
   components: {},
   props: {
     title: "", // 标题
+    noPadding: false, // 无padding
   },
   data() {
     return {};
