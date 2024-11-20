@@ -23,6 +23,7 @@ export default {
   background-color: #ffffff;
   padding: 24rpx;
   border-radius: 24rpx;
+  overflow: hidden;
 
   .card-title {
     height: 80rpx;
@@ -30,6 +31,9 @@ export default {
     font-size: 34rpx;
     color: #111111;
     font-weight: 500;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
   }
 }
 </style>

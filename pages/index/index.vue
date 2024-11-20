@@ -12,8 +12,8 @@
         :item-list="planSelectFilter"
         @confirm="confirmSelect"
       />
-      <yl-default-card title="标题">
-        12321
+      <yl-default-card title="标题标题标题标题标题标题标题标题标题标题标题标题标题标题">
+        <view>12321</view>
       </yl-default-card>
     </view>
   </view>
