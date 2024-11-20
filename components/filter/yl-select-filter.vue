@@ -2,7 +2,7 @@
   <view class="yl-select-filter">
     <view class="filter_btn" @tap.stop="show = true">
       <text>{{ title || '选择' }}</text>
-      <u-icon :name="iconName || 'arrow-down'" color="#999999" size="16"/>
+      <u-icon :name="iconName || 'arrow-down'" color="#999999" size="12"/>
     </view>
     <u-picker
       ref="uPicker"
