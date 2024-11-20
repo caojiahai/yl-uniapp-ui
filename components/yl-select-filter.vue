@@ -1,7 +1,7 @@
 <template>
   <view class="yl-select-filter">
     <view class="filter_btn" @click="show = true">
-      <text>{{ title }}</text>
+      <text>{{ title || '排序' }}</text>
       <u-icon :name="iconName || 'arrow-down'" color="#999999" size="16"/>
     </view>
     <u-picker
@@ -34,13 +34,13 @@ export default {
   watch: {
     'itemList': {
       handler() {
-        this.columns = [[...this.itemList]];
+        this.columns = [[...this.itemList || []]];
       },
       deep: true
     },
   },
   mounted() {
-    this.columns = [[...this.itemList]];
+    this.columns = [[...this.itemList || []]];
   },
   data() {
     return {

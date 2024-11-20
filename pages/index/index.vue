@@ -9,7 +9,6 @@
     <view style="margin-top: 44px">
       <yl-select-filter
         :item-list="planSelectFilter"
-        title="测试"
         @confirm="confirmSelect"
       />
     </view>
