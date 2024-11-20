@@ -12,16 +12,19 @@
         :item-list="planSelectFilter"
         @confirm="confirmSelect"
       />
+      <yl-default-card title="标题">
+        12321
+      </yl-default-card>
     </view>
   </view>
 </template>
-
 <script>
 import YlSelectFilter from "@/components/filter/yl-select-filter.vue";
 import YlSortFilter from "@/components/filter/yl-sort-filter.vue";
+import YlDefaultCard from "@/components/card/yl-default-card.vue";
 
 export default {
-  components: {YlSortFilter, YlSelectFilter},
+  components: {YlDefaultCard, YlSortFilter, YlSelectFilter},
   data() {
     return {
       title: '',
@@ -41,9 +44,9 @@ export default {
   }
 }
 </script>
-
 <style>
 .home {
-
+  height: 100vh;
+  background-color: #f8f8f8;
 }
 </style>
