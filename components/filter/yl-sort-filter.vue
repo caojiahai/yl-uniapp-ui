@@ -2,10 +2,10 @@
   <view class="yl-sort-filter">
     <view class="sort_btn" @tap.stop="sortChange">
       <text>{{ title || '排序' }}</text>
-      <text>
+      <view>
         <u-icon :color="sort === 'asc' ? '#333333': '#999999'" name="arrow-up-fill" size="8"/>
         <u-icon :color="sort === 'desc' ? '#333333': '#999999'" name="arrow-down-fill" size="8"/>
-      </text>
+      </view>
     </view>
   </view>
 </template>
