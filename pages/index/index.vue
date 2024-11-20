@@ -7,20 +7,23 @@
     >
     </u-navbar>
     <view style="margin-top: 44px">
-      <yl-select-filter
-        :item-list="planSelectFilter"
-        @confirm="confirmSelect"
-      />
+      <view style="display: flex; align-items: center;">
+        <yl-sort-filter title="日期"/>
+        <yl-select-filter
+          :item-list="planSelectFilter"
+          @confirm="confirmSelect"
+        />
+      </view>
     </view>
   </view>
 </template>
 
 <script>
-import DefaultCard from "@/components/DefaultCard.vue";
 import YlSelectFilter from "@/components/yl-select-filter.vue";
+import YlSortFilter from "@/components/yl-sort-filter.vue";
 
 export default {
-  components: {YlSelectFilter, DefaultCard},
+  components: {YlSortFilter, YlSelectFilter},
   data() {
     return {
       title: '',
