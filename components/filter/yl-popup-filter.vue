@@ -5,18 +5,15 @@
       <text>{{ title || '选择' }}</text>
     </view>
     <u-popup
-      :customStyle="{width: '100vw'}"
+      :customStyle="{width: `${popupWidth || 100}vw`}"
       :show="show"
       mode="right"
       @close="close"
     >
-      <u-navbar :autoBack="false" :title="popupTitle || '标题'" @leftClick="close"/>
-      <view class="yl-popup-body">
-        <slot></slot>
-      </view>
+      <slot></slot>
       <view class="yl-popup-footer">
-        <view @click="cancel">{{ cancelText || '重置' }}</view>
-        <view @click="confirm">{{ confirmText || '确定' }}</view>
+        <view class="cancel" @click="cancel">{{ cancelText || '重置' }}</view>
+        <view class="confirm" @click="confirm">{{ confirmText || '确定' }}</view>
       </view>
     </u-popup>
   </view>
@@ -30,10 +27,10 @@ export default {
   components: {},
   props: {
     title: "", // 按钮文本
-    popupTitle: "", // 弹窗标题
     cancelText: "", // 取消按钮文本
     confirmText: "", // 确认按钮文本
     iconUrl: "", // 图标URL
+    popupWidth: "", // 弹窗宽度
   },
   data() {
     return {
@@ -70,8 +67,35 @@ export default {
   }
 }
 
-.yl-popup-body {
-  margin-top: 44px;
+.yl-popup-footer {
+  display: flex;
+  align-items: center;
+  padding: 32rpx;
+
+  .cancel {
+    width: 240rpx;
+    min-width: 100rpx;
+    height: 88rpx;
+    line-height: 88rpx;
+    text-align: center;
+    border-radius: 8rpx;
+    border: 2rpx solid #dcdcdc;
+    box-sizing: border-box;
+  }
+
+  .confirm {
+    flex: 1;
+    min-width: 100rpx;
+    color: #ffffff;
+    height: 88rpx;
+    line-height: 88rpx;
+    text-align: center;
+    border-radius: 8rpx;
+    background-color: #ff9438;
+    border: 2rpx solid #ff9438;
+    box-sizing: border-box;
+    margin-left: 20rpx;
+  }
 }
 
 </style>

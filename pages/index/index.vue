@@ -6,7 +6,7 @@
       title="首页"
     />
     <view style="margin-top: 44px">
-      <yl-popup-filter @cancel="cancelFilter" @confirm="confirmFilter">
+      <yl-popup-filter :popup-width="100" @cancel="cancelFilter" @confirm="confirmFilter">
         <view>111</view>
         <view>222</view>
       </yl-popup-filter>
