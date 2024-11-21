@@ -22,7 +22,7 @@
   </view>
 </template>
 <script>
-import {Base64} from "@/components/common/base64";
+import {Base64} from "./../common/base64";
 
 export default {
   name: "yl-popup-filter",
