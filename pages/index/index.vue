@@ -4,10 +4,12 @@
       :autoBack="false"
       leftIcon=""
       title="首页"
-    >
-    </u-navbar>
+    />
     <view style="margin-top: 44px">
-      
+      <yl-popup-filter @cancel="cancelFilter" @confirm="confirmFilter">
+        <view>111</view>
+        <view>222</view>
+      </yl-popup-filter>
     </view>
   </view>
 </template>
@@ -15,9 +17,10 @@
 import YlSelectFilter from "@/components/filter/yl-select-filter.vue";
 import YlSortFilter from "@/components/filter/yl-sort-filter.vue";
 import YlDefaultCard from "@/components/card/yl-default-card.vue";
+import YlPopupFilter from "@/components/filter/yl-popup-filter.vue";
 
 export default {
-  components: {YlDefaultCard, YlSortFilter, YlSelectFilter},
+  components: {YlPopupFilter, YlDefaultCard, YlSortFilter, YlSelectFilter},
   data() {
     return {
       title: '',
@@ -31,8 +34,11 @@ export default {
     }, 2000)
   },
   methods: {
-    confirmSelect(val) {
-      console.log(val);
+    cancelFilter() {
+      console.log(111)
+    },
+    confirmFilter() {
+      console.log(222);
     }
   }
 }
