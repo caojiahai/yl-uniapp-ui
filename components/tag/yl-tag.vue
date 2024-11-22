@@ -1,0 +1,60 @@
+<template>
+  <view
+    :class="`${!!selected ? 'yl-tag-selected' : 'yl-tag-unselected'} ${!!ellipsis ? '' : 'yl-tag-ellipsis'}`"
+    class="yl-tag"
+    @click="click"
+  >
+    {{ title || '默认标签' }}
+  </view>
+</template>
+<script>
+export default {
+  name: "yl-tag",
+  computed: {},
+  components: {},
+  props: {
+    title: "", // 标题
+    ellipsis: "", // 是否超出隐藏、默认超出隐藏
+    selected: "", // 是否隐藏
+    name: "", // 标签标识
+  },
+  data() {
+    return {};
+  },
+  methods: {
+    click() {
+      this.$emit('tagClick', this.name ?? '')
+    }
+  }
+};
+</script>
+<style lang="scss" scoped>
+.yl-tag {
+  text-align: center;
+  min-width: 152rpx;
+  padding: 0 40rpx;
+  width: fit-content;
+  border-radius: 4rpx;
+  box-sizing: border-box;
+  font-size: 26rpx;
+  line-height: 58rpx;
+}
+
+.yl-tag-unselected {
+  background-color: #f6f6f6;
+  border: 1rpx solid #f6f6f6;
+  color: #111111;
+}
+
+.yl-tag-selected {
+  background-color: #FF94381A;
+  border: 1rpx solid #ff9438;
+  color: #ff9438;
+}
+
+.yl-tag-ellipsis {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+</style>
