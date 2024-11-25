@@ -10,7 +10,7 @@
           {{ value ? value : placeholder }}
         </text>
         <view class="item-icon">
-          <u-icon v-if="rightIcon" color="#999999" name="arrow-right" size="12"/>
+          <u-icon v-if="rightIcon" color="#999999" name="arrow-right" size="14"/>
         </view>
       </view>
     </view>
