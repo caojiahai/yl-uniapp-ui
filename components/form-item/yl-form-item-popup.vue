@@ -9,7 +9,9 @@
         <text :class="value ? 'item-value': 'item-placeholder'">
           {{ value ? value : placeholder }}
         </text>
-        <u-icon v-if="rightIcon" color="#999999" name="arrow-right" size="16" style="margin-left: 8rpx"/>
+        <view class="item-icon">
+          <u-icon v-if="rightIcon" color="#999999" name="arrow-right" size="16"/>
+        </view>
       </view>
     </view>
     <u-popup :mode="popupMode" :round="popupRound" :show="show" closeOnClickOverlay @close="closePopup">
@@ -109,12 +111,12 @@ export default {
   .form-item {
     display: flex;
     align-items: center;
-    padding: 0 32rpx;
     min-height: 96rpx;
 
     .item-label {
       width: 144rpx;
       font-size: 28rpx;
+      color: #666666;
 
       text {
         color: #FF3131;
@@ -140,6 +142,15 @@ export default {
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
+      }
+
+      .item-icon {
+        margin-left: 8rpx;
+        width: 20px;
+        height: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
       }
     }
   }
