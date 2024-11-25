@@ -1,5 +1,5 @@
 <template>
-  <view class="yl-select-list">
+  <view class="yl-select-list" @click="click">
     <text :class="selected ? 'text-selected' : 'text-un-select'" class="text-ellipsis ">
       {{ value }}
     </text>
@@ -23,16 +23,18 @@ export default {
       type: String,
       default: ""
     },
+    // 列表标识
+    name: {
+      type: String | Number,
+      default: ""
+    },
   },
   data() {
     return {};
   },
   methods: {
-    leftClick() {
-      this.$emit("leftClick")
-    },
-    rightClick() {
-      this.$emit("rightClick")
+    click() {
+      this.$emit('listClick', this.name ?? '')
     }
   }
 };

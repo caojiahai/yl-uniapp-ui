@@ -30,7 +30,7 @@ export default {
     },
     // 标签标识
     name: {
-      type: String,
+      type: String | Number,
       default: ""
     },
   },
