@@ -120,7 +120,6 @@ export default {
 
       text {
         color: #FF3131;
-        margin-right: 4rpx;
       }
     }
 
