@@ -7,11 +7,11 @@
     />
     <view style="margin-top: 44px; background-color: #f8f8f8;padding: 12px;">
       <yl-form-item-popup
-        :default-value="'888888888888888888888888888888888888'"
         :popup-show="show"
         :required="true"
+        default-value=""
         justify-content="flex-end"
-        title="认证"
+        title="测试标题"
         @closePopup="show = false"
         @showPopup="show = true"
       >
