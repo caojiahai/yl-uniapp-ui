@@ -15,7 +15,8 @@
         @closePopup="show = false"
         @showPopup="show = true"
       >
-        <view>popup</view>
+        <yl-default-header @leftClick="show = false" @rightClick="show = false"/>
+        <yl-select-list :selected="false" value="测试测试"/>
       </yl-form-item-popup>
       <!--      <view style="display: flex;background-color: #ffffff;gap: 20rpx;flex-wrap: wrap;">-->
       <!--        <yl-tag v-for="(x, index) in [1,2,3,4,5,6]" :key="index" :name="index" :selected="currentIndex === index"-->
@@ -35,9 +36,14 @@ import YlDefaultCard from "@/components/card/yl-default-card.vue";
 import YlPopupFilter from "@/components/filter/yl-popup-filter.vue";
 import YlTag from "@/components/tag/yl-tag.vue";
 import YlFormItemPopup from "@/components/form-item/yl-form-item-popup.vue";
+import YlDefaultHeader from "@/components/header/yl-default-header.vue";
+import YlSelectList from "@/components/list/yl-select-list.vue";
 
 export default {
-  components: {YlFormItemPopup, YlTag, YlPopupFilter, YlDefaultCard, YlSortFilter, YlSelectFilter},
+  components: {
+    YlSelectList,
+    YlDefaultHeader, YlFormItemPopup, YlTag, YlPopupFilter, YlDefaultCard, YlSortFilter, YlSelectFilter
+  },
   data() {
     return {
       title: '',
