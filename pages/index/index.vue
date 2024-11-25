@@ -5,9 +5,17 @@
       leftIcon=""
       title="首页"
     />
-    <view style="margin-top: 44px; background-color: #f8f8f8;">
-      <yl-form-item-popup justify-content="flex-end">
-        <view>12123</view>
+    <view style="margin-top: 44px; background-color: #f8f8f8;padding: 12px;">
+      <yl-form-item-popup
+        :default-value="'888888888888888888888888888888888888'"
+        :popup-show="show"
+        :required="true"
+        justify-content="flex-end"
+        title="认证"
+        @closePopup="show = false"
+        @showPopup="show = true"
+      >
+        <view>popup</view>
       </yl-form-item-popup>
       <!--      <view style="display: flex;background-color: #ffffff;gap: 20rpx;flex-wrap: wrap;">-->
       <!--        <yl-tag v-for="(x, index) in [1,2,3,4,5,6]" :key="index" :name="index" :selected="currentIndex === index"-->
@@ -34,7 +42,8 @@ export default {
     return {
       title: '',
       planSelectFilter: [{label: '全部订单', id: ''}],
-      currentIndex: 0
+      currentIndex: 0,
+      show: false
     }
   },
   onLoad() {
