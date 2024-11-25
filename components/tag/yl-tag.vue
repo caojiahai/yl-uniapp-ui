@@ -13,10 +13,26 @@ export default {
   computed: {},
   components: {},
   props: {
-    title: "", // 标题
-    ellipsis: "", // 是否超出隐藏、默认超出隐藏
-    selected: "", // 是否隐藏
-    name: "", // 标签标识
+    // 标题
+    title: {
+      type: String,
+      default: ""
+    },
+    // 是否超出隐藏、默认超出隐藏
+    ellipsis: {
+      type: String,
+      default: ""
+    },
+    // 是否隐藏
+    selected: {
+      type: String,
+      default: ""
+    },
+    // 标签标识
+    name: {
+      type: String,
+      default: ""
+    },
   },
   data() {
     return {};

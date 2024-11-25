@@ -26,11 +26,31 @@ export default {
   computed: {},
   components: {},
   props: {
-    title: "", // 按钮文本
-    cancelText: "", // 取消按钮文本
-    confirmText: "", // 确认按钮文本
-    iconUrl: "", // 图标URL
-    popupWidth: "", // 弹窗宽度
+    // 按钮文本
+    title: {
+      type: String,
+      default: ""
+    },
+    // 取消按钮文本
+    cancelText: {
+      type: String,
+      default: ""
+    },
+    // 确认按钮文本
+    confirmText: {
+      type: String,
+      default: ""
+    },
+    // 图标URL
+    iconUrl: {
+      type: String,
+      default: ""
+    },
+    // 弹窗宽度
+    popupWidth: {
+      type: String,
+      default: ""
+    },
   },
   data() {
     return {

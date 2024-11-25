@@ -5,15 +5,18 @@
       leftIcon=""
       title="首页"
     />
-    <view style="margin-top: 44px">
-      <view style="display: flex;background-color: #ffffff;gap: 20rpx;flex-wrap: wrap;">
-        <yl-tag v-for="(x, index) in [1,2,3,4,5,6]" :key="index" :name="index" :selected="currentIndex === index"
-                @tagClick="tagClick"/>
-      </view>
-      <yl-popup-filter :popup-width="100" @cancel="cancelFilter" @confirm="confirmFilter">
-        <view>111</view>
-        <view>222</view>
-      </yl-popup-filter>
+    <view style="margin-top: 44px; background-color: #f8f8f8;">
+      <yl-form-item-popup justify-content="flex-end">
+        <view>12123</view>
+      </yl-form-item-popup>
+      <!--      <view style="display: flex;background-color: #ffffff;gap: 20rpx;flex-wrap: wrap;">-->
+      <!--        <yl-tag v-for="(x, index) in [1,2,3,4,5,6]" :key="index" :name="index" :selected="currentIndex === index"-->
+      <!--                @tagClick="tagClick"/>-->
+      <!--      </view>-->
+      <!--      <yl-popup-filter :popup-width="100" @cancel="cancelFilter" @confirm="confirmFilter">-->
+      <!--        <view>111</view>-->
+      <!--        <view>222</view>-->
+      <!--      </yl-popup-filter>-->
     </view>
   </view>
 </template>
@@ -23,9 +26,10 @@ import YlSortFilter from "@/components/filter/yl-sort-filter.vue";
 import YlDefaultCard from "@/components/card/yl-default-card.vue";
 import YlPopupFilter from "@/components/filter/yl-popup-filter.vue";
 import YlTag from "@/components/tag/yl-tag.vue";
+import YlFormItemPopup from "@/components/form-item/yl-form-item-popup.vue";
 
 export default {
-  components: {YlTag, YlPopupFilter, YlDefaultCard, YlSortFilter, YlSelectFilter},
+  components: {YlFormItemPopup, YlTag, YlPopupFilter, YlDefaultCard, YlSortFilter, YlSelectFilter},
   data() {
     return {
       title: '',

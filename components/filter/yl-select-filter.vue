@@ -24,12 +24,36 @@ export default {
   computed: {},
   components: {},
   props: {
-    title: "", // 按钮文本
-    itemList: "", // 传入列表
-    cancelText: "", // 取消按钮文本
-    confirmText: "", // 确认按钮文本
-    iconName: "", // 图标name
-    keyName: "", // keyName
+    // 按钮文本
+    title: {
+      type: String,
+      default: ""
+    },
+    // 传入列表
+    itemList: {
+      type: String,
+      default: ""
+    },
+    // 取消按钮文本
+    cancelText: {
+      type: String,
+      default: ""
+    },
+    // 确认按钮文本
+    confirmText: {
+      type: String,
+      default: ""
+    },
+    // 图标name
+    iconName: {
+      type: String,
+      default: ""
+    },
+    // keyName
+    keyName: {
+      type: String,
+      default: ""
+    },
   },
   watch: {
     'itemList': {

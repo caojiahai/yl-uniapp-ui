@@ -15,8 +15,16 @@ export default {
   computed: {},
   components: {},
   props: {
-    title: "", // 按钮文本
-    defaultSort: "", // 默认排序
+    // 按钮文本
+    title: {
+      type: String,
+      default: ""
+    },
+    // 默认排序
+    defaultSort: {
+      type: String,
+      default: ""
+    },
   },
   watch: {
     'defaultSort': {

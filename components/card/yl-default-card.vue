@@ -10,8 +10,16 @@ export default {
   computed: {},
   components: {},
   props: {
-    title: "", // 标题
-    noPadding: false, // 无padding
+    // 标题
+    title: {
+      type: String,
+      default: ""
+    },
+    // 无padding
+    noPadding: {
+      type: Boolean,
+      default: false
+    },
   },
   data() {
     return {};
