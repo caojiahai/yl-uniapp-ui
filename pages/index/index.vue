@@ -16,7 +16,7 @@
         @showPopup="show = true"
       >
         <yl-default-header @leftClick="show = false" @rightClick="show = false"/>
-        <yl-select-list :selected="false" value="测试测试"/>
+        <yl-select-list :icon-name="'checkmark'" :selected="true" value="测试测试"/>
       </yl-form-item-popup>
       <!--      <view style="display: flex;background-color: #ffffff;gap: 20rpx;flex-wrap: wrap;">-->
       <!--        <yl-tag v-for="(x, index) in [1,2,3,4,5,6]" :key="index" :name="index" :selected="currentIndex === index"-->

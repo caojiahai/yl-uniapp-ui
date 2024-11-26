@@ -4,7 +4,7 @@
       {{ value }}
     </text>
     <view class="text-icon">
-      <u-icon v-if="selected" color="#ff9438" name="checkmark-circle-fill" size="20"/>
+      <u-icon v-if="selected" :name="iconName" color="#ff9438" size="20"/>
     </view>
   </view>
 </template>
@@ -28,6 +28,11 @@ export default {
       type: String | Number,
       default: ""
     },
+    // 列表标识
+    iconName: {
+      type: String,
+      default: "checkmark-circle-fill"
+    },
   },
   data() {
     return {};
@@ -45,7 +50,6 @@ export default {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 32rpx;
   overflow: hidden;
 
   .text-icon {
