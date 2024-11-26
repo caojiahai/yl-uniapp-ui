@@ -6,18 +6,20 @@
       title="首页"
     />
     <view style="margin-top: 44px; background-color: #f8f8f8;padding: 12px;">
-      <yl-form-item-popup
-        :popup-show="show"
-        :required="true"
-        default-value=""
-        justify-content="flex-end"
-        title="测试标题"
-        @closePopup="show = false"
-        @showPopup="show = true"
-      >
-        <yl-default-header @leftClick="show = false" @rightClick="show = false"/>
-        <yl-select-list :icon-name="'checkmark'" :selected="true" value="测试测试"/>
-      </yl-form-item-popup>
+      <!--      <yl-form-item-popup-->
+      <!--        :popup-show="show"-->
+      <!--        :required="true"-->
+      <!--        default-value=""-->
+      <!--        justify-content="flex-end"-->
+      <!--        title="测试标题"-->
+      <!--        @closePopup="show = false"-->
+      <!--        @showPopup="show = true"-->
+      <!--      >-->
+      <!--        <yl-default-header @leftClick="show = false" @rightClick="show = false"/>-->
+      <!--        <yl-select-list :icon-name="'checkmark'" :selected="true" value="测试测试"/>-->
+      <!--      </yl-form-item-popup>-->
+
+
       <!--      <view style="display: flex;background-color: #ffffff;gap: 20rpx;flex-wrap: wrap;">-->
       <!--        <yl-tag v-for="(x, index) in [1,2,3,4,5,6]" :key="index" :name="index" :selected="currentIndex === index"-->
       <!--                @tagClick="tagClick"/>-->
@@ -26,6 +28,16 @@
       <!--        <view>111</view>-->
       <!--        <view>222</view>-->
       <!--      </yl-popup-filter>-->
+    </view>
+    <view>
+      <yl-custom-filter :bg-height="182" :show="show">
+        <template #list>
+          <view @click="show = true">1111</view>
+        </template>
+        <template #popup>
+          <view>2222</view>
+        </template>
+      </yl-custom-filter>
     </view>
   </view>
 </template>
@@ -38,9 +50,11 @@ import YlTag from "@/components/tag/yl-tag.vue";
 import YlFormItemPopup from "@/components/form-item/yl-form-item-popup.vue";
 import YlDefaultHeader from "@/components/header/yl-default-header.vue";
 import YlSelectList from "@/components/list/yl-select-list.vue";
+import YlCustomFilter from "@/components/filter/yl-custom-filter.vue";
 
 export default {
   components: {
+    YlCustomFilter,
     YlSelectList,
     YlDefaultHeader, YlFormItemPopup, YlTag, YlPopupFilter, YlDefaultCard, YlSortFilter, YlSelectFilter
   },
