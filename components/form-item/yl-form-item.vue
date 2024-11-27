@@ -1,11 +1,11 @@
 <template>
-  <view class="yl-form-item-popup">
+  <view class="yl-form-item">
     <view class="form-item">
       <view class="item-label">
         <text v-if="required">*</text>
         {{ title }}
       </view>
-      <view :style="{ justifyContent: justifyContent }" class="item-content" @click="showPopup">
+      <view :style="{ justifyContent: justifyContent }" class="item-content" @click="click">
         <text :class="value ? 'item-value': 'item-placeholder'">
           {{ value ? value : placeholder }}
         </text>
@@ -14,14 +14,14 @@
         </view>
       </view>
     </view>
-    <u-popup :mode="popupMode" :round="popupRound" :show="show" closeOnClickOverlay @close="closePopup">
-      <slot></slot>
-    </u-popup>
+    <template>
+      <slot name="extend"></slot>
+    </template>
   </view>
 </template>
 <script>
 export default {
-  name: "yl-form-item-popup",
+  name: "yl-form-item",
   props: {
     // 标题
     title: {
@@ -53,34 +53,12 @@ export default {
       type: String,
       default: 'space-between',
     },
-    // popup mode
-    popupMode: {
-      type: String,
-      default: 'bottom',
-    },
-    // popup round
-    popupRound: {
-      type: Number,
-      default: 0
-    },
-    // popup show
-    popupShow: {
-      type: Boolean,
-      default: false
-    }
   },
   computed: {},
   mounted() {
-    this.show = this.popupShow;
     this.value = this.defaultValue;
   },
   watch: {
-    'popupShow': {
-      handler(val) {
-        this.show = val;
-      },
-      deep: true
-    },
     'defaultValue': {
       handler(val) {
         this.value = val;
@@ -91,21 +69,17 @@ export default {
   data() {
     return {
       value: '', // 当前选中
-      show: false,
     };
   },
   methods: {
-    showPopup() {
-      this.$emit('showPopup');
-    },
-    closePopup() {
-      this.$emit('closePopup')
-    },
+    click() {
+      this.$emit('itemClick');
+    }
   }
 };
 </script>
 <style lang="scss" scoped>
-.yl-form-item-popup {
+.yl-form-item {
   background-color: #ffffff;
 
   .form-item {

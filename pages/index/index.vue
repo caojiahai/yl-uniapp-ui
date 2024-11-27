@@ -85,6 +85,17 @@
         </view>
       </template>
     </yl-custom-popup-filter>
+    <yl-form-item
+      :required="true"
+      title="测试"
+      @itemClick="confirm"
+    >
+      <template #extend>
+        <u-popup :show="show" closeOnClickOverlay mode="bottom" @close="show = false">
+          <slot></slot>
+        </u-popup>
+      </template>
+    </yl-form-item>
   </view>
 </template>
 <script>
@@ -101,9 +112,11 @@ import YlCustomSelectFilter from "@/components/filter/yl-custom-select-filter.vu
 import YlCustomDate from "@/components/date/yl-custom-date.vue";
 import YlDefaultProgress from "@/components/progress/yl-default-progress.vue";
 import YlCustomPopupFilter from "@/components/filter/yl-custom-popup-filter.vue";
+import YlFormItem from "@/components/form-item/yl-form-item.vue";
 
 export default {
   components: {
+    YlFormItem,
     YlCustomPopupFilter,
     YlDefaultProgress,
     YlCustomDate,
@@ -133,7 +146,7 @@ export default {
     },
     confirm(val) {
       console.log(val)
-      this.show = false;
+      this.show = true;
     },
     tagClick(val) {
       this.currentIndex = val;
