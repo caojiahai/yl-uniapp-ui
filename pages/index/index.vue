@@ -67,6 +67,13 @@
           </view>
         </template>
       </yl-custom-filter>
+      <yl-default-progress
+        :percentage="55"
+        :percentage-text="'1/2'"
+        color="#ff5925"
+        lg-form-color="#ffad3a"
+        lg-to-color="#ff6320"
+      />
     </view>
   </view>
 </template>
@@ -82,9 +89,11 @@ import YlSelectList from "@/components/list/yl-select-list.vue";
 import YlCustomFilter from "@/components/filter/yl-custom-filter.vue";
 import YlCustomSelectFilter from "@/components/filter/yl-custom-select-filter.vue";
 import YlCustomDate from "@/components/date/yl-custom-date.vue";
+import YlDefaultProgress from "@/components/progress/yl-default-progress.vue";
 
 export default {
   components: {
+    YlDefaultProgress,
     YlCustomDate,
     YlCustomSelectFilter,
     YlCustomFilter,

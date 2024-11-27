@@ -4,6 +4,7 @@
   "repository": "https://github.com/caojiahai/yl-uniapp-ui.git",
   "dependencies": {
     "dayjs": "^1.11.13",
+    "lodash": "^4.17.21",
     "uview-ui": "^2.0.37"
   },
   "devDependencies": {
