@@ -4,7 +4,14 @@
       <slot name="content"></slot>
     </template>
     <view v-if="show" :style="{ height: `calc(100vh - ${bgHeight}rpx)` }" class="item_popup_bg" @click="close"/>
-    <view v-if="show" class="item_popup">
+    <view
+      v-if="show"
+      :style="{
+        borderBottomLeftRadius: `${popupRound}rpx`,
+        borderBottomRightRadius: `${popupRound}rpx`
+      }"
+      class="item_popup"
+    >
       <template>
         <slot name="popup"></slot>
       </template>
@@ -23,6 +30,10 @@ export default {
     },
     // 背景高度
     bgHeight: {
+      type: Number,
+      default: 0
+    },
+    popupRound: {
       type: Number,
       default: 0
     }

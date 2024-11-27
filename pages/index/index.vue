@@ -46,28 +46,28 @@
         <view @click="show = true">111</view>
       </template>
     </yl-custom-date>
-    <!--    <view>-->
-    <!--      <yl-custom-filter :bg-height="182" :show="show" @close="show = false">-->
-    <!--        <template #content>-->
-    <!--          <view style="display: flex;align-items: center;justify-content: space-between;">-->
-    <!--            <view @click="show = true">排序</view>-->
-    <!--            <yl-popup-filter :show="show1">-->
-    <!--              <template #content>-->
-    <!--                <view @click="show1 = true">筛选</view>-->
-    <!--              </template>-->
-    <!--              <template #popup>-->
-    <!--                <view @click="show1 = false">111</view>-->
-    <!--              </template>-->
-    <!--            </yl-popup-filter>-->
-    <!--          </view>-->
-    <!--        </template>-->
-    <!--        <template #popup>-->
-    <!--          <view>-->
-    <!--            <yl-select-list :icon-name="'checkmark'" :selected="true" value="测试测试"/>-->
-    <!--          </view>-->
-    <!--        </template>-->
-    <!--      </yl-custom-filter>-->
-    <!--    </view>-->
+    <view>
+      <yl-custom-filter :bg-height="182" :popup-round="20" :show="show" @close="show = false">
+        <template #content>
+          <view style="display: flex;align-items: center;justify-content: space-between;">
+            <view @click="show = true">排序</view>
+            <yl-popup-filter :show="show1">
+              <template #content>
+                <view @click="show1 = true">筛选</view>
+              </template>
+              <template #popup>
+                <view @click="show1 = false">111</view>
+              </template>
+            </yl-popup-filter>
+          </view>
+        </template>
+        <template #popup>
+          <view>
+            <yl-select-list :icon-name="'checkmark'" :selected="true" value="测试测试"/>
+          </view>
+        </template>
+      </yl-custom-filter>
+    </view>
   </view>
 </template>
 <script>
