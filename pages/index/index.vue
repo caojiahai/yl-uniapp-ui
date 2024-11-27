@@ -29,18 +29,23 @@
       <!--        <view>222</view>-->
       <!--      </yl-popup-filter>-->
     </view>
-    <yl-custom-select-filter
-      :item-list="[{ id: 1, name: '111'}, { id: 2, name: '222'}]"
-      :show="show"
-      key-name="name"
-      @cancel="cancel"
-      @close="show = false"
-      @confirm="confirm"
-    >
+    <!--    <yl-custom-select-filter-->
+    <!--      :item-list="[{ id: 1, name: '111'}, { id: 2, name: '222'}]"-->
+    <!--      :show="show"-->
+    <!--      key-name="name"-->
+    <!--      @cancel="cancel"-->
+    <!--      @close="show = false"-->
+    <!--      @confirm="confirm"-->
+    <!--    >-->
+    <!--      <template #content>-->
+    <!--        <view @click="show = true">排序</view>-->
+    <!--      </template>-->
+    <!--    </yl-custom-select-filter>-->
+    <yl-custom-date :default-value="'2024-11-29'" :show="show" @confirm="confirm">
       <template #content>
-        <view @click="show = true">排序</view>
+        <view @click="show = true">111</view>
       </template>
-    </yl-custom-select-filter>
+    </yl-custom-date>
     <!--    <view>-->
     <!--      <yl-custom-filter :bg-height="182" :show="show" @close="show = false">-->
     <!--        <template #content>-->
@@ -76,9 +81,11 @@ import YlDefaultHeader from "@/components/header/yl-default-header.vue";
 import YlSelectList from "@/components/list/yl-select-list.vue";
 import YlCustomFilter from "@/components/filter/yl-custom-filter.vue";
 import YlCustomSelectFilter from "@/components/filter/yl-custom-select-filter.vue";
+import YlCustomDate from "@/components/date/yl-custom-date.vue";
 
 export default {
   components: {
+    YlCustomDate,
     YlCustomSelectFilter,
     YlCustomFilter,
     YlSelectList,
@@ -103,7 +110,8 @@ export default {
     cancel() {
       // this.show = false;
     },
-    confirm() {
+    confirm(val) {
+      console.log(val)
       this.show = false;
     },
     tagClick(val) {

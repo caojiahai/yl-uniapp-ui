@@ -3,6 +3,7 @@
   "version": "1.0.1",
   "repository": "https://github.com/caojiahai/yl-uniapp-ui.git",
   "dependencies": {
+    "dayjs": "^1.11.13",
     "uview-ui": "^2.0.37"
   },
   "devDependencies": {
