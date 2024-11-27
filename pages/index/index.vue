@@ -75,27 +75,28 @@
     <!--        lg-to-color="#ff6320"-->
     <!--      />-->
     <!--    </view>-->
-    <yl-custom-popup-filter :popup-round="20" :show="show" @close="show = false">
-      <template #content>
-        <view @click="show = true">111</view>
-      </template>
-      <template #popup>
-        <view @click="show = false">
-          222
-        </view>
-      </template>
-    </yl-custom-popup-filter>
-    <yl-form-item
-      :required="true"
-      title="测试"
-      @itemClick="confirm"
-    >
-      <template #extend>
-        <u-popup :show="show" closeOnClickOverlay mode="bottom" @close="show = false">
-          <slot></slot>
-        </u-popup>
-      </template>
-    </yl-form-item>
+    <!--    <yl-custom-popup-filter :popup-round="20" :show="show" @close="show = false">-->
+    <!--      <template #content>-->
+    <!--        <view @click="show = true">111</view>-->
+    <!--      </template>-->
+    <!--      <template #popup>-->
+    <!--        <view @click="show = false">-->
+    <!--          222-->
+    <!--        </view>-->
+    <!--      </template>-->
+    <!--    </yl-custom-popup-filter>-->
+    <!--    <yl-form-item-->
+    <!--      :required="true"-->
+    <!--      title="测试"-->
+    <!--      @itemClick="confirm"-->
+    <!--    >-->
+    <!--      <template #extend>-->
+    <!--        <u-popup :show="show" closeOnClickOverlay mode="bottom" @close="show = false">-->
+    <!--          12312312-->
+    <!--        </u-popup>-->
+    <!--      </template>-->
+    <!--    </yl-form-item>-->
+    <yl-form-item-input :right-icon="false" title="标题"/>
   </view>
 </template>
 <script>
@@ -113,9 +114,11 @@ import YlCustomDate from "@/components/date/yl-custom-date.vue";
 import YlDefaultProgress from "@/components/progress/yl-default-progress.vue";
 import YlCustomPopupFilter from "@/components/filter/yl-custom-popup-filter.vue";
 import YlFormItem from "@/components/form-item/yl-form-item.vue";
+import YlFormItemInput from "@/components/form-item/yl-form-item-input.vue";
 
 export default {
   components: {
+    YlFormItemInput,
     YlFormItem,
     YlCustomPopupFilter,
     YlDefaultProgress,
