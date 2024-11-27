@@ -30,12 +30,24 @@
       <!--      </yl-popup-filter>-->
     </view>
     <view>
-      <yl-custom-filter :bg-height="182" :show="show">
-        <template #list>
-          <view @click="show = true">1111</view>
+      <yl-custom-filter :bg-height="182" :show="show" @close="show = false">
+        <template #content>
+          <view style="display: flex;align-items: center;justify-content: space-between;">
+            <view @click="show = true">排序</view>
+            <yl-popup-filter :show="show1">
+              <template #content>
+                <view @click="show1 = true">筛选</view>
+              </template>
+              <template #popup>
+                <view @click="show1 = false">111</view>
+              </template>
+            </yl-popup-filter>
+          </view>
         </template>
         <template #popup>
-          <view>2222</view>
+          <view>
+            <yl-select-list :icon-name="'checkmark'" :selected="true" value="测试测试"/>
+          </view>
         </template>
       </yl-custom-filter>
     </view>
@@ -63,7 +75,8 @@ export default {
       title: '',
       planSelectFilter: [{label: '全部订单', id: ''}],
       currentIndex: 0,
-      show: false
+      show: false,
+      show1: false
     }
   },
   onLoad() {

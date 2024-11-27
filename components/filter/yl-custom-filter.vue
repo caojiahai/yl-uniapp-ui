@@ -1,7 +1,7 @@
 <template>
   <view class="yl-custom-filter">
     <template>
-      <slot name="list"></slot>
+      <slot name="content"></slot>
     </template>
     <view v-if="show" :style="{ height: `calc(100vh - ${bgHeight}rpx)` }" class="item_popup_bg" @click="close"/>
     <view v-if="show" class="item_popup">
@@ -34,7 +34,11 @@ export default {
   },
   watch: {},
   computed: {},
-  methods: {}
+  methods: {
+    close() {
+      this.$emit("close")
+    }
+  }
 };
 </script>
 <style lang="scss" scoped>
