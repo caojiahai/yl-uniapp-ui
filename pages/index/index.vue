@@ -41,40 +41,50 @@
     <!--        <view @click="show = true">排序</view>-->
     <!--      </template>-->
     <!--    </yl-custom-select-filter>-->
-    <yl-custom-date :default-value="'2024-11-29'" :show="show" @confirm="confirm">
+    <!--    <yl-custom-date :default-value="'2024-11-29'" :show="show" @confirm="confirm">-->
+    <!--      <template #content>-->
+    <!--        <view @click="show = true">111</view>-->
+    <!--      </template>-->
+    <!--    </yl-custom-date>-->
+    <!--    <view>-->
+    <!--      <yl-custom-filter :bg-height="182" :popup-round="20" :show="show" @close="show = false">-->
+    <!--        <template #content>-->
+    <!--          <view style="display: flex;align-items: center;justify-content: space-between;">-->
+    <!--            <view @click="show = true">排序</view>-->
+    <!--            <yl-popup-filter :show="show1">-->
+    <!--              <template #content>-->
+    <!--                <view @click="show1 = true">筛选</view>-->
+    <!--              </template>-->
+    <!--              <template #popup>-->
+    <!--                <view @click="show1 = false">111</view>-->
+    <!--              </template>-->
+    <!--            </yl-popup-filter>-->
+    <!--          </view>-->
+    <!--        </template>-->
+    <!--        <template #popup>-->
+    <!--          <view>-->
+    <!--            <yl-select-list :icon-name="'checkmark'" :selected="true" value="测试测试"/>-->
+    <!--          </view>-->
+    <!--        </template>-->
+    <!--      </yl-custom-filter>-->
+    <!--      <yl-default-progress-->
+    <!--        :percentage="55"-->
+    <!--        :percentage-text="'1/2'"-->
+    <!--        color="#ff5925"-->
+    <!--        lg-form-color="#ffad3a"-->
+    <!--        lg-to-color="#ff6320"-->
+    <!--      />-->
+    <!--    </view>-->
+    <yl-custom-popup-filter :popup-round="20" :show="show" @close="show = false">
       <template #content>
         <view @click="show = true">111</view>
       </template>
-    </yl-custom-date>
-    <view>
-      <yl-custom-filter :bg-height="182" :popup-round="20" :show="show" @close="show = false">
-        <template #content>
-          <view style="display: flex;align-items: center;justify-content: space-between;">
-            <view @click="show = true">排序</view>
-            <yl-popup-filter :show="show1">
-              <template #content>
-                <view @click="show1 = true">筛选</view>
-              </template>
-              <template #popup>
-                <view @click="show1 = false">111</view>
-              </template>
-            </yl-popup-filter>
-          </view>
-        </template>
-        <template #popup>
-          <view>
-            <yl-select-list :icon-name="'checkmark'" :selected="true" value="测试测试"/>
-          </view>
-        </template>
-      </yl-custom-filter>
-      <yl-default-progress
-        :percentage="55"
-        :percentage-text="'1/2'"
-        color="#ff5925"
-        lg-form-color="#ffad3a"
-        lg-to-color="#ff6320"
-      />
-    </view>
+      <template #popup>
+        <view @click="show = false">
+          222
+        </view>
+      </template>
+    </yl-custom-popup-filter>
   </view>
 </template>
 <script>
@@ -90,9 +100,11 @@ import YlCustomFilter from "@/components/filter/yl-custom-filter.vue";
 import YlCustomSelectFilter from "@/components/filter/yl-custom-select-filter.vue";
 import YlCustomDate from "@/components/date/yl-custom-date.vue";
 import YlDefaultProgress from "@/components/progress/yl-default-progress.vue";
+import YlCustomPopupFilter from "@/components/filter/yl-custom-popup-filter.vue";
 
 export default {
   components: {
+    YlCustomPopupFilter,
     YlDefaultProgress,
     YlCustomDate,
     YlCustomSelectFilter,
