@@ -74,7 +74,6 @@ export default {
   .header_left {
     width: 200rpx;
     font-size: 32rpx;
-    color: #999999;
   }
 
   .header_title {
@@ -90,7 +89,6 @@ export default {
   .header_right {
     width: 200rpx;
     font-size: 32rpx;
-    color: #14191E;
     text-align: right;
   }
 }
