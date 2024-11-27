@@ -29,28 +29,40 @@
       <!--        <view>222</view>-->
       <!--      </yl-popup-filter>-->
     </view>
-    <view>
-      <yl-custom-filter :bg-height="182" :show="show" @close="show = false">
-        <template #content>
-          <view style="display: flex;align-items: center;justify-content: space-between;">
-            <view @click="show = true">排序</view>
-            <yl-popup-filter :show="show1">
-              <template #content>
-                <view @click="show1 = true">筛选</view>
-              </template>
-              <template #popup>
-                <view @click="show1 = false">111</view>
-              </template>
-            </yl-popup-filter>
-          </view>
-        </template>
-        <template #popup>
-          <view>
-            <yl-select-list :icon-name="'checkmark'" :selected="true" value="测试测试"/>
-          </view>
-        </template>
-      </yl-custom-filter>
-    </view>
+    <yl-custom-select-filter
+      :item-list="[{ id: 1, name: '111'}, { id: 2, name: '222'}]"
+      :show="show"
+      key-name="name"
+      @cancel="cancel"
+      @close="show = false"
+      @confirm="confirm"
+    >
+      <template #content>
+        <view @click="show = true">排序</view>
+      </template>
+    </yl-custom-select-filter>
+    <!--    <view>-->
+    <!--      <yl-custom-filter :bg-height="182" :show="show" @close="show = false">-->
+    <!--        <template #content>-->
+    <!--          <view style="display: flex;align-items: center;justify-content: space-between;">-->
+    <!--            <view @click="show = true">排序</view>-->
+    <!--            <yl-popup-filter :show="show1">-->
+    <!--              <template #content>-->
+    <!--                <view @click="show1 = true">筛选</view>-->
+    <!--              </template>-->
+    <!--              <template #popup>-->
+    <!--                <view @click="show1 = false">111</view>-->
+    <!--              </template>-->
+    <!--            </yl-popup-filter>-->
+    <!--          </view>-->
+    <!--        </template>-->
+    <!--        <template #popup>-->
+    <!--          <view>-->
+    <!--            <yl-select-list :icon-name="'checkmark'" :selected="true" value="测试测试"/>-->
+    <!--          </view>-->
+    <!--        </template>-->
+    <!--      </yl-custom-filter>-->
+    <!--    </view>-->
   </view>
 </template>
 <script>
@@ -63,9 +75,11 @@ import YlFormItemPopup from "@/components/form-item/yl-form-item-popup.vue";
 import YlDefaultHeader from "@/components/header/yl-default-header.vue";
 import YlSelectList from "@/components/list/yl-select-list.vue";
 import YlCustomFilter from "@/components/filter/yl-custom-filter.vue";
+import YlCustomSelectFilter from "@/components/filter/yl-custom-select-filter.vue";
 
 export default {
   components: {
+    YlCustomSelectFilter,
     YlCustomFilter,
     YlSelectList,
     YlDefaultHeader, YlFormItemPopup, YlTag, YlPopupFilter, YlDefaultCard, YlSortFilter, YlSelectFilter
@@ -86,6 +100,12 @@ export default {
     }, 2000)
   },
   methods: {
+    cancel() {
+      // this.show = false;
+    },
+    confirm() {
+      this.show = false;
+    },
     tagClick(val) {
       this.currentIndex = val;
       console.log(val)
