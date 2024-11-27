@@ -46,7 +46,7 @@ export default {
     // 右侧按钮颜色
     rightColor: {
       type: String,
-      default: "#14191E"
+      default: "#ff9438"
     },
   },
   data() {

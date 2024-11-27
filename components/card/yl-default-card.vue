@@ -28,6 +28,8 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
+@import "libs/css/theme";
+
 .yl-default-card {
   background-color: #ffffff;
   padding: 24rpx;
