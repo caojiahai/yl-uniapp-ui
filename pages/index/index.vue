@@ -98,6 +98,7 @@
     <!--    </yl-form-item>-->
     <!--    <yl-form-item-input title="标题"/>-->
     <yl-tab-tag color="red" sub-title="费用" title="预估"/>
+    <yl-count-down end-time="2024-12-08"/>
   </view>
 </template>
 <script>
@@ -117,9 +118,11 @@ import YlCustomPopupFilter from "@/components/filter/yl-custom-popup-filter.vue"
 import YlFormItem from "@/components/form-item/yl-form-item.vue";
 import YlFormItemInput from "@/components/form-item/yl-form-item-input.vue";
 import YlTabTag from "@/components/tag/yl-tab-tag.vue";
+import YlCountDown from "@/components/count/yl-count-down.vue";
 
 export default {
   components: {
+    YlCountDown,
     YlTabTag,
     YlFormItemInput,
     YlFormItem,
