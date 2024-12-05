@@ -17,175 +17,20 @@
         <yl-default-list title="倒计时" @listClick="goNext('/pages/count')"/>
         <yl-default-list title="卡片" @listClick="goNext('/pages/card')"/>
       </yl-default-card>
-      <!--      <yl-form-item-popup-->
-      <!--        :popup-show="show"-->
-      <!--        :required="true"-->
-      <!--        default-value=""-->
-      <!--        justify-content="flex-end"-->
-      <!--        title="测试标题"-->
-      <!--        @closePopup="show = false"-->
-      <!--        @showPopup="show = true"-->
-      <!--      >-->
-      <!--        <yl-default-header @leftClick="show = false" @rightClick="show = false"/>-->
-      <!--        <yl-select-list :icon-name="'checkmark'" :selected="true" value="测试测试"/>-->
-      <!--      </yl-form-item-popup>-->
-
-
-      <!--      <view style="display: flex;background-color: #ffffff;gap: 20rpx;flex-wrap: wrap;">-->
-      <!--        <yl-tag v-for="(x, index) in [1,2,3,4,5,6]" :key="index" :name="index" :selected="currentIndex === index"-->
-      <!--                @tagClick="tagClick"/>-->
-      <!--      </view>-->
-      <!--      <yl-popup-filter :popup-width="100" @cancel="cancelFilter" @confirm="confirmFilter">-->
-      <!--        <view>111</view>-->
-      <!--        <view>222</view>-->
-      <!--      </yl-popup-filter>-->
     </view>
-    <!--    <yl-custom-select-filter-->
-    <!--      :item-list="[{ id: 1, name: '111'}, { id: 2, name: '222'}]"-->
-    <!--      :show="show"-->
-    <!--      key-name="name"-->
-    <!--      @cancel="cancel"-->
-    <!--      @close="show = false"-->
-    <!--      @confirm="confirm"-->
-    <!--    >-->
-    <!--      <template #content>-->
-    <!--        <view @click="show = true">排序</view>-->
-    <!--      </template>-->
-    <!--    </yl-custom-select-filter>-->
-    <!--    <yl-custom-date :default-value="'2024-11-29'" :show="show" @confirm="confirm">-->
-    <!--      <template #content>-->
-    <!--        <view @click="show = true">111</view>-->
-    <!--      </template>-->
-    <!--    </yl-custom-date>-->
-    <!--    <view>-->
-    <!--      <yl-custom-filter :bg-height="182" :popup-round="20" :show="show" @close="show = false">-->
-    <!--        <template #content>-->
-    <!--          <view style="display: flex;align-items: center;justify-content: space-between;">-->
-    <!--            <view @click="show = true">排序</view>-->
-    <!--            <yl-popup-filter :show="show1">-->
-    <!--              <template #content>-->
-    <!--                <view @click="show1 = true">筛选</view>-->
-    <!--              </template>-->
-    <!--              <template #popup>-->
-    <!--                <view @click="show1 = false">111</view>-->
-    <!--              </template>-->
-    <!--            </yl-popup-filter>-->
-    <!--          </view>-->
-    <!--        </template>-->
-    <!--        <template #popup>-->
-    <!--          <view>-->
-    <!--            <yl-select-list :icon-name="'checkmark'" :selected="true" value="测试测试"/>-->
-    <!--          </view>-->
-    <!--        </template>-->
-    <!--      </yl-custom-filter>-->
-    <!--      <yl-default-progress-->
-    <!--        :percentage="55"-->
-    <!--        :percentage-text="'1/2'"-->
-    <!--        color="#ff5925"-->
-    <!--        lg-form-color="#ffad3a"-->
-    <!--        lg-to-color="#ff6320"-->
-    <!--      />-->
-    <!--    </view>-->
-    <!--    <yl-custom-popup-filter :popup-round="20" :show="show" @close="show = false">-->
-    <!--      <template #content>-->
-    <!--        <view @click="show = true">111</view>-->
-    <!--      </template>-->
-    <!--      <template #popup>-->
-    <!--        <view @click="show = false">-->
-    <!--          222-->
-    <!--        </view>-->
-    <!--      </template>-->
-    <!--    </yl-custom-popup-filter>-->
-    <!--    <yl-form-item-->
-    <!--      :required="true"-->
-    <!--      title="测试"-->
-    <!--      @itemClick="confirm"-->
-    <!--    >-->
-    <!--      <template #extend>-->
-    <!--        <u-popup :show="show" closeOnClickOverlay mode="bottom" @close="show = false">-->
-    <!--          12312312-->
-    <!--        </u-popup>-->
-    <!--      </template>-->
-    <!--    </yl-form-item>-->
-    <!--    <yl-form-item-input title="标题"/>-->
-
-    <yl-count-down end-time="2024-12-08"/>
-    <yl-count-down end-time="2024-12-09"/>
-    <yl-item-list label="任务费用">
-      <template #content>
-        <view style="display: flex;align-items: center">
-          <text>7.2w</text>
-          <yl-tab-tag color="red" sub-title="费用" title="预估"/>
-        </view>
-      </template>
-    </yl-item-list>
-    <yl-item-layout-list label="任务内容">
-      <template #content>
-        <view style="display: flex;align-items: center;margin-top: 8rpx;">
-          <text>7.2w</text>
-          <yl-tab-tag color="red" sub-title="费用" title="预估"/>
-        </view>
-      </template>
-    </yl-item-layout-list>
-    <yl-default-tag/>
-    <yl-default-list title="标签" @listClick="tagClick('tag')"/>
   </view>
 </template>
 <script>
-import YlSelectFilter from "@/components/filter/yl-select-filter.vue";
-import YlSortFilter from "@/components/filter/yl-sort-filter.vue";
 import YlDefaultCard from "@/components/card/yl-default-card.vue";
-import YlPopupFilter from "@/components/filter/yl-popup-filter.vue";
-import YlTag from "@/components/tag/yl-tag.vue";
-import YlFormItemPopup from "@/components/form-item/yl-form-item-popup.vue";
-import YlDefaultHeader from "@/components/header/yl-default-header.vue";
-import YlSelectList from "@/components/list/yl-select-list.vue";
-import YlCustomFilter from "@/components/filter/yl-custom-filter.vue";
-import YlCustomSelectFilter from "@/components/filter/yl-custom-select-filter.vue";
-import YlCustomDate from "@/components/date/yl-custom-date.vue";
-import YlDefaultProgress from "@/components/progress/yl-default-progress.vue";
-import YlCustomPopupFilter from "@/components/filter/yl-custom-popup-filter.vue";
-import YlFormItem from "@/components/form-item/yl-form-item.vue";
-import YlFormItemInput from "@/components/form-item/yl-form-item-input.vue";
-import YlTabTag from "@/components/tag/yl-tab-tag.vue";
-import YlCountDown from "@/components/count/yl-count-down.vue";
-import YlItemList from "@/components/list/yl-item-list.vue";
-import YlItemLayoutList from "@/components/list/yl-item-layout-list.vue";
-import YlDefaultTag from "@/components/tag/yl-default-tag.vue";
 import YlDefaultList from "@/components/list/yl-default-list.vue";
 
 export default {
   components: {
     YlDefaultList,
-    YlDefaultTag,
-    YlItemLayoutList,
-    YlItemList,
-    YlCountDown,
-    YlTabTag,
-    YlFormItemInput,
-    YlFormItem,
-    YlCustomPopupFilter,
-    YlDefaultProgress,
-    YlCustomDate,
-    YlCustomSelectFilter,
-    YlCustomFilter,
-    YlSelectList,
-    YlDefaultHeader, YlFormItemPopup, YlTag, YlPopupFilter, YlDefaultCard, YlSortFilter, YlSelectFilter
+    YlDefaultCard
   },
   data() {
-    return {
-      title: '',
-      planSelectFilter: [{label: '全部订单', id: ''}],
-      currentIndex: 0,
-      show: false,
-      show1: false
-    }
-  },
-  onLoad() {
-    let t = this;
-    setTimeout(function () {
-      t.planSelectFilter.push({label: '订单1', id: '1'})
-    }, 2000)
+    return {}
   },
   methods: {
     goNext(val) {
@@ -193,23 +38,6 @@ export default {
         url: val
       })
     },
-    cancel() {
-      // this.show = false;
-    },
-    confirm(val) {
-      console.log(val)
-      this.show = true;
-    },
-    tagClick(val) {
-      this.currentIndex = val;
-      console.log(val)
-    },
-    cancelFilter() {
-      console.log(111)
-    },
-    confirmFilter() {
-      console.log(222);
-    }
   }
 }
 </script>
