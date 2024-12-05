@@ -116,6 +116,7 @@
         </view>
       </template>
     </yl-item-layout-list>
+    <yl-default-tag/>
   </view>
 </template>
 <script>
@@ -138,9 +139,11 @@ import YlTabTag from "@/components/tag/yl-tab-tag.vue";
 import YlCountDown from "@/components/count/yl-count-down.vue";
 import YlItemList from "@/components/list/yl-item-list.vue";
 import YlItemLayoutList from "@/components/list/yl-item-layout-list.vue";
+import YlDefaultTag from "@/components/tag/yl-default-tag.vue";
 
 export default {
   components: {
+    YlDefaultTag,
     YlItemLayoutList,
     YlItemList,
     YlCountDown,
