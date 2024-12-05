@@ -62,6 +62,12 @@
       "style": {
         "navigationBarTitleText": "头部"
       }
+    },
+    {
+      "path": "pages/title",
+      "style": {
+        "navigationBarTitleText": "标题"
+      }
     }
   ],
   "globalStyle": {

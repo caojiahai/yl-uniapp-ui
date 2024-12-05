@@ -41,5 +41,6 @@ export default {
   line-height: 30rpx;
   font-size: 22rpx;
   border-radius: 8rpx;
+  white-space: nowrap;
 }
 </style>

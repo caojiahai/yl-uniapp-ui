@@ -16,6 +16,7 @@
         <yl-default-list title="日期" @listClick="goNext('/pages/date')"/>
         <yl-default-list title="倒计时" @listClick="goNext('/pages/count')"/>
         <yl-default-list title="卡片" @listClick="goNext('/pages/card')"/>
+        <yl-default-list title="标题" @listClick="goNext('/pages/title')"/>
       </yl-default-card>
     </view>
   </view>
