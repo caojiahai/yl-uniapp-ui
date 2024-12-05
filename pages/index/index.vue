@@ -8,6 +8,14 @@
     <view style="margin-top: 44px;padding: 24rpx;">
       <yl-default-card>
         <yl-default-list title="标签" @listClick="goNext('/pages/tag')"/>
+        <yl-default-list title="进度" @listClick="goNext('/pages/progress')"/>
+        <yl-default-list title="列表" @listClick="goNext('/pages/list')"/>
+        <yl-default-list title="头部" @listClick="goNext('/pages/progress')"/>
+        <yl-default-list title="表单" @listClick="goNext('/pages/progress')"/>
+        <yl-default-list title="过滤" @listClick="goNext('/pages/progress')"/>
+        <yl-default-list title="日期" @listClick="goNext('/pages/progress')"/>
+        <yl-default-list title="倒计时" @listClick="goNext('/pages/progress')"/>
+        <yl-default-list title="卡片" @listClick="goNext('/pages/progress')"/>
       </yl-default-card>
       <!--      <yl-form-item-popup-->
       <!--        :popup-show="show"-->

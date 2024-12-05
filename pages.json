@@ -14,6 +14,18 @@
       "style": {
         "navigationBarTitleText": "标签"
       }
+    },
+    {
+      "path": "pages/progress",
+      "style": {
+        "navigationBarTitleText": "进度"
+      }
+    },
+    {
+      "path": "pages/list",
+      "style": {
+        "navigationBarTitleText": "列表"
+      }
     }
   ],
   "globalStyle": {
