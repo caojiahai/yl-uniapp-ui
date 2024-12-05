@@ -97,8 +97,25 @@
     <!--      </template>-->
     <!--    </yl-form-item>-->
     <!--    <yl-form-item-input title="标题"/>-->
-    <yl-tab-tag color="red" sub-title="费用" title="预估"/>
+
     <yl-count-down end-time="2024-12-08"/>
+    <yl-count-down end-time="2024-12-09"/>
+    <yl-item-list label="任务费用">
+      <template #content>
+        <view style="display: flex;align-items: center">
+          <text>7.2w</text>
+          <yl-tab-tag color="red" sub-title="费用" title="预估"/>
+        </view>
+      </template>
+    </yl-item-list>
+    <yl-item-layout-list label="任务内容">
+      <template #content>
+        <view style="display: flex;align-items: center;margin-top: 8rpx;">
+          <text>7.2w</text>
+          <yl-tab-tag color="red" sub-title="费用" title="预估"/>
+        </view>
+      </template>
+    </yl-item-layout-list>
   </view>
 </template>
 <script>
@@ -119,9 +136,13 @@ import YlFormItem from "@/components/form-item/yl-form-item.vue";
 import YlFormItemInput from "@/components/form-item/yl-form-item-input.vue";
 import YlTabTag from "@/components/tag/yl-tab-tag.vue";
 import YlCountDown from "@/components/count/yl-count-down.vue";
+import YlItemList from "@/components/list/yl-item-list.vue";
+import YlItemLayoutList from "@/components/list/yl-item-layout-list.vue";
 
 export default {
   components: {
+    YlItemLayoutList,
+    YlItemList,
     YlCountDown,
     YlTabTag,
     YlFormItemInput,
