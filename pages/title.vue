@@ -5,12 +5,14 @@
       <yl-default-card>
         <yl-default-title title="标题标题标题标题标题标题标题标题标题标题标题标题">
           <template #extend>
-            <yl-default-tag/>
-            <yl-default-tag/>
-            <yl-default-tag/>
+            <view style="display: flex;align-items: center; margin-left: 20rpx;">
+              <yl-default-tag/>
+              <yl-default-tag/>
+              <yl-default-tag/>
+            </view>
           </template>
           <template #content>
-            <view style="display: flex;align-items: center;">
+            <view style="display: flex;align-items: center; margin-left: 20rpx;">
               <text style="white-space: nowrap;">进行中</text>
               <u-icon color="#999999" name="arrow-right" size="14"/>
             </view>
