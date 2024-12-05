@@ -1,122 +1,17 @@
 <template>
   <view class="home">
-    <u-navbar
-      :autoBack="false"
-      leftIcon=""
-      title="标签展示"
-    />
-    <view style="margin-top: 44px; background-color: #f8f8f8;padding: 12px;">
-      <!--      <yl-form-item-popup-->
-      <!--        :popup-show="show"-->
-      <!--        :required="true"-->
-      <!--        default-value=""-->
-      <!--        justify-content="flex-end"-->
-      <!--        title="测试标题"-->
-      <!--        @closePopup="show = false"-->
-      <!--        @showPopup="show = true"-->
-      <!--      >-->
-      <!--        <yl-default-header @leftClick="show = false" @rightClick="show = false"/>-->
-      <!--        <yl-select-list :icon-name="'checkmark'" :selected="true" value="测试测试"/>-->
-      <!--      </yl-form-item-popup>-->
-
-
-      <!--      <view style="display: flex;background-color: #ffffff;gap: 20rpx;flex-wrap: wrap;">-->
-      <!--        <yl-tag v-for="(x, index) in [1,2,3,4,5,6]" :key="index" :name="index" :selected="currentIndex === index"-->
-      <!--                @tagClick="tagClick"/>-->
-      <!--      </view>-->
-      <!--      <yl-popup-filter :popup-width="100" @cancel="cancelFilter" @confirm="confirmFilter">-->
-      <!--        <view>111</view>-->
-      <!--        <view>222</view>-->
-      <!--      </yl-popup-filter>-->
+    <u-navbar :autoBack="true" title="标签展示"/>
+    <view style="margin-top: 44px;padding: 24rpx;">
+      <yl-default-card>
+        <yl-default-tag/>
+        <view style="margin-top: 20rpx;"/>
+        <yl-tab-tag sub-title="值值值值值" title="标签"/>
+        <view style="margin-top: 20rpx;"/>
+        <yl-tag :selected="false" title="标签"/>
+        <view style="margin-top: 20rpx;"/>
+        <yl-tag :selected="true" title="标签"/>
+      </yl-default-card>
     </view>
-    <!--    <yl-custom-select-filter-->
-    <!--      :item-list="[{ id: 1, name: '111'}, { id: 2, name: '222'}]"-->
-    <!--      :show="show"-->
-    <!--      key-name="name"-->
-    <!--      @cancel="cancel"-->
-    <!--      @close="show = false"-->
-    <!--      @confirm="confirm"-->
-    <!--    >-->
-    <!--      <template #content>-->
-    <!--        <view @click="show = true">排序</view>-->
-    <!--      </template>-->
-    <!--    </yl-custom-select-filter>-->
-    <!--    <yl-custom-date :default-value="'2024-11-29'" :show="show" @confirm="confirm">-->
-    <!--      <template #content>-->
-    <!--        <view @click="show = true">111</view>-->
-    <!--      </template>-->
-    <!--    </yl-custom-date>-->
-    <!--    <view>-->
-    <!--      <yl-custom-filter :bg-height="182" :popup-round="20" :show="show" @close="show = false">-->
-    <!--        <template #content>-->
-    <!--          <view style="display: flex;align-items: center;justify-content: space-between;">-->
-    <!--            <view @click="show = true">排序</view>-->
-    <!--            <yl-popup-filter :show="show1">-->
-    <!--              <template #content>-->
-    <!--                <view @click="show1 = true">筛选</view>-->
-    <!--              </template>-->
-    <!--              <template #popup>-->
-    <!--                <view @click="show1 = false">111</view>-->
-    <!--              </template>-->
-    <!--            </yl-popup-filter>-->
-    <!--          </view>-->
-    <!--        </template>-->
-    <!--        <template #popup>-->
-    <!--          <view>-->
-    <!--            <yl-select-list :icon-name="'checkmark'" :selected="true" value="测试测试"/>-->
-    <!--          </view>-->
-    <!--        </template>-->
-    <!--      </yl-custom-filter>-->
-    <!--      <yl-default-progress-->
-    <!--        :percentage="55"-->
-    <!--        :percentage-text="'1/2'"-->
-    <!--        color="#ff5925"-->
-    <!--        lg-form-color="#ffad3a"-->
-    <!--        lg-to-color="#ff6320"-->
-    <!--      />-->
-    <!--    </view>-->
-    <!--    <yl-custom-popup-filter :popup-round="20" :show="show" @close="show = false">-->
-    <!--      <template #content>-->
-    <!--        <view @click="show = true">111</view>-->
-    <!--      </template>-->
-    <!--      <template #popup>-->
-    <!--        <view @click="show = false">-->
-    <!--          222-->
-    <!--        </view>-->
-    <!--      </template>-->
-    <!--    </yl-custom-popup-filter>-->
-    <!--    <yl-form-item-->
-    <!--      :required="true"-->
-    <!--      title="测试"-->
-    <!--      @itemClick="confirm"-->
-    <!--    >-->
-    <!--      <template #extend>-->
-    <!--        <u-popup :show="show" closeOnClickOverlay mode="bottom" @close="show = false">-->
-    <!--          12312312-->
-    <!--        </u-popup>-->
-    <!--      </template>-->
-    <!--    </yl-form-item>-->
-    <!--    <yl-form-item-input title="标题"/>-->
-
-    <yl-count-down end-time="2024-12-08"/>
-    <yl-count-down end-time="2024-12-09"/>
-    <yl-item-list label="任务费用">
-      <template #content>
-        <view style="display: flex;align-items: center">
-          <text>7.2w</text>
-          <yl-tab-tag color="red" sub-title="费用" title="预估"/>
-        </view>
-      </template>
-    </yl-item-list>
-    <yl-item-layout-list label="任务内容">
-      <template #content>
-        <view style="display: flex;align-items: center;margin-top: 8rpx;">
-          <text>7.2w</text>
-          <yl-tab-tag color="red" sub-title="费用" title="预估"/>
-        </view>
-      </template>
-    </yl-item-layout-list>
-    <yl-default-tag/>
   </view>
 </template>
 <script>

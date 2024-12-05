@@ -5,7 +5,10 @@
       leftIcon=""
       title="首页"
     />
-    <view style="margin-top: 44px; background-color: #f8f8f8;padding: 12px;">
+    <view style="margin-top: 44px;padding: 24rpx;">
+      <yl-default-card>
+        <yl-default-list title="标签" @listClick="goNext('/pages/tag')"/>
+      </yl-default-card>
       <!--      <yl-form-item-popup-->
       <!--        :popup-show="show"-->
       <!--        :required="true"-->
@@ -177,6 +180,11 @@ export default {
     }, 2000)
   },
   methods: {
+    goNext(val) {
+      uni.navigateTo({
+        url: val
+      })
+    },
     cancel() {
       // this.show = false;
     },

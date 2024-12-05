@@ -1,6 +1,6 @@
 <template>
   <view
-    :class="`${!!selected ? 'yl-tag-selected' : 'yl-tag-unselected'} ${!!ellipsis ? '' : 'yl-tag-ellipsis'}`"
+    :class="`${selected ? 'yl-tag-selected' : 'yl-tag-unselected'} ${ellipsis ? '' : 'yl-tag-ellipsis'}`"
     class="yl-tag"
     @click="click"
   >
@@ -20,13 +20,13 @@ export default {
     },
     // 是否超出隐藏、默认超出隐藏
     ellipsis: {
-      type: String,
-      default: ""
+      type: Boolean,
+      default: false
     },
     // 是否隐藏
     selected: {
-      type: String,
-      default: ""
+      type: Boolean,
+      default: false
     },
     // 标签标识
     name: {
