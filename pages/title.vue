@@ -33,6 +33,15 @@
             </view>
           </template>
         </yl-default-title>
+        <u-divider/>
+        <yl-form-title :required="true" title="测试标题">
+          <template #content>
+            <view style="display: flex;align-items: center;">
+              <text style="white-space: nowrap;color: #ff9438;">查看详情</text>
+              <u-icon color="#999999" name="arrow-right" size="14"/>
+            </view>
+          </template>
+        </yl-form-title>
       </yl-default-card>
     </view>
   </view>
@@ -42,9 +51,11 @@ import YlDefaultCard from "@/components/card/yl-default-card.vue";
 import YlCountCard from "@/components/card/yl-count-card.vue";
 import YlDefaultTitle from "@/components/title/yl-default-title.vue";
 import YlDefaultTag from "@/components/tag/yl-default-tag.vue";
+import YlFormTitle from "@/components/title/yl-form-title.vue";
 
 export default {
   components: {
+    YlFormTitle,
     YlDefaultTag,
     YlDefaultTitle,
     YlCountCard,
