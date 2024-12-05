@@ -36,7 +36,7 @@
       <yl-default-card>
         <yl-form-title :required="true" title="测试标题"></yl-form-title>
         <view style="margin-top: 16rpx;">
-          <u--textarea v-model="value1" placeholder="请输入内容"></u--textarea>
+          <u--textarea v-model="value" placeholder="请输入"></u--textarea>
         </view>
       </yl-default-card>
     </view>
@@ -64,7 +64,8 @@ export default {
   data() {
     return {
       show: false,
-      show1: false
+      show1: false,
+      value: ''
     }
   },
   methods: {
