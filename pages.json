@@ -8,6 +8,12 @@
       "style": {
         "navigationBarTitleText": "首页"
       }
+    },
+    {
+      "path": "pages/tag",
+      "style": {
+        "navigationBarTitleText": "标签"
+      }
     }
   ],
   "globalStyle": {

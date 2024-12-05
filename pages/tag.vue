@@ -3,7 +3,7 @@
     <u-navbar
       :autoBack="false"
       leftIcon=""
-      title="首页"
+      title="标签展示"
     />
     <view style="margin-top: 44px; background-color: #f8f8f8;padding: 12px;">
       <!--      <yl-form-item-popup-->
@@ -117,7 +117,6 @@
       </template>
     </yl-item-layout-list>
     <yl-default-tag/>
-    <yl-default-list title="标签" @listClick="tagClick('tag')"/>
   </view>
 </template>
 <script>
@@ -141,11 +140,9 @@ import YlCountDown from "@/components/count/yl-count-down.vue";
 import YlItemList from "@/components/list/yl-item-list.vue";
 import YlItemLayoutList from "@/components/list/yl-item-layout-list.vue";
 import YlDefaultTag from "@/components/tag/yl-default-tag.vue";
-import YlDefaultList from "@/components/list/yl-default-list.vue";
 
 export default {
   components: {
-    YlDefaultList,
     YlDefaultTag,
     YlItemLayoutList,
     YlItemList,
