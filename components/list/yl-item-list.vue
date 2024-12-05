@@ -1,10 +1,5 @@
 <template>
-  <view :style="{
-      height: `${itemHeight}`,
-      justifyContent: `${justifyContent}`
-    }"
-        class="yl-item-list"
-  >
+  <view :style="{ height: `${itemHeight}` }" class="yl-item-list">
     <view class="item-label">{{ label }}</view>
     <view v-if="value" class="item-value item-ellipsis">{{ value }}</view>
     <template>
@@ -33,11 +28,6 @@ export default {
       type: String,
       default: '72rpx'
     },
-    // 排序方式
-    justifyContent: {
-      type: String,
-      default: 'space-between'
-    }
   },
   data() {
     return {};
@@ -53,6 +43,7 @@ export default {
 .yl-item-list {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   overflow: hidden;
 
   .item-label {

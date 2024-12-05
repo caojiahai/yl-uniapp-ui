@@ -32,7 +32,6 @@ export default {
     color: #666666;
     font-size: 28rpx;
     line-height: 40rpx;
-    margin-right: 24rpx;
   }
 }
 </style>
