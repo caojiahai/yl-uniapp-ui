@@ -4,7 +4,7 @@
   },
   "pages": [
     {
-      "path": "pages/index/index",
+      "path": "pages/index",
       "style": {
         "navigationBarTitleText": "首页"
       }
@@ -25,6 +25,42 @@
       "path": "pages/list",
       "style": {
         "navigationBarTitleText": "列表"
+      }
+    },
+    {
+      "path": "pages/card",
+      "style": {
+        "navigationBarTitleText": "卡片"
+      }
+    },
+    {
+      "path": "pages/count",
+      "style": {
+        "navigationBarTitleText": "倒计时"
+      }
+    },
+    {
+      "path": "pages/date",
+      "style": {
+        "navigationBarTitleText": "日期"
+      }
+    },
+    {
+      "path": "pages/filter",
+      "style": {
+        "navigationBarTitleText": "过滤"
+      }
+    },
+    {
+      "path": "pages/form-item",
+      "style": {
+        "navigationBarTitleText": "表单子项"
+      }
+    },
+    {
+      "path": "pages/header",
+      "style": {
+        "navigationBarTitleText": "头部"
       }
     }
   ],

@@ -1,6 +1,6 @@
 <template>
   <view class="home">
-    <u-navbar :autoBack="true" title="标签展示"/>
+    <u-navbar :autoBack="true" title="标签"/>
     <view style="margin-top: 44px;padding: 24rpx;background-color: #f8f8f8;">
       <yl-default-card>
         <yl-default-tag/>

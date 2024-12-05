@@ -1,28 +1,22 @@
 <template>
   <view className="home">
-    <u-navbar :autoBack="true" title="进度条"/>
+    <u-navbar :autoBack="true" title="倒计时"/>
     <view style="margin-top: 44px;padding: 24rpx;background-color: #f8f8f8;">
       <yl-default-card>
-        <yl-default-progress :percentage="50"/>
+        <yl-count-down end-time="2024-12-08"/>
         <u-divider/>
-        <yl-default-progress
-          :percentage="50"
-          :percentage-text="'1/2'"
-          color="#ff5925"
-          lg-form-color="#ffad3a"
-          lg-to-color="#ff6320"
-        />
+        <yl-count-down end-time="2024-12-09"/>
       </yl-default-card>
     </view>
   </view>
 </template>
 <script>
 import YlDefaultCard from "@/components/card/yl-default-card.vue";
-import YlDefaultProgress from "@/components/progress/yl-default-progress.vue";
+import YlCountDown from "@/components/count/yl-count-down.vue";
 
 export default {
   components: {
-    YlDefaultProgress,
+    YlCountDown,
     YlDefaultCard
   },
   data() {

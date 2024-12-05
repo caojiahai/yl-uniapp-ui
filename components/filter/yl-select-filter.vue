@@ -31,7 +31,7 @@ export default {
     },
     // 传入列表
     itemList: {
-      type: String,
+      type: Array,
       default: ""
     },
     // 取消按钮文本

@@ -1,6 +1,6 @@
 <template>
   <view className="home">
-    <u-navbar :autoBack="true" title="列表展示"/>
+    <u-navbar :autoBack="true" title="列表"/>
     <view style="margin-top: 44px;padding: 24rpx;background-color: #f8f8f8;">
       <yl-default-card>
         <yl-default-list title="列表" value="222"/>
