@@ -32,6 +32,13 @@
           <yl-select-list :icon-name="'checkmark'" :selected="true" value="测试测试"/>
         </yl-form-item-popup>
       </yl-default-card>
+      <u-divider/>
+      <yl-default-card>
+        <yl-form-title :required="true" title="测试标题"></yl-form-title>
+        <view style="margin-top: 16rpx;">
+          <u--textarea v-model="value1" placeholder="请输入内容"></u--textarea>
+        </view>
+      </yl-default-card>
     </view>
   </view>
 </template>
@@ -42,10 +49,13 @@ import YlFormItemInput from "@/components/form-item/yl-form-item-input.vue";
 import YlFormItemPopup from "@/components/form-item/yl-form-item-popup.vue";
 import YlSelectList from "@/components/list/yl-select-list.vue";
 import YlDefaultHeader from "@/components/header/yl-default-header.vue";
+import YlFormTitle from "@/components/title/yl-form-title.vue";
 
 export default {
   components: {
-    YlDefaultHeader, YlSelectList,
+    YlFormTitle,
+    YlDefaultHeader,
+    YlSelectList,
     YlFormItemPopup,
     YlFormItemInput,
     YlFormItem,
