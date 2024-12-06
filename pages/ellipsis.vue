@@ -4,10 +4,19 @@
     <view style="margin-top: 44px;padding: 24rpx;background-color: #f8f8f8;">
       <yl-default-card>
         <view style="display: flex;align-items: center;gap: 20rpx;">
-          <yl-ellipsis :suffix-count="6" color="#999" size="30rpx"
-                       text="我是标题我是标题我是标题我是标题我是标题我是标题我是标题.pdf"/>
+          <yl-ellipsis
+            :suffix-count="6"
+            color="#999"
+            size="30rpx"
+            text="我是标题我是标题我是标题我是标题我是标题我是标题我是标题.pdf"
+          />
           <view style="color: red;white-space: nowrap;">删除</view>
         </view>
+        <u-divider/>
+        <yl-ellipsis
+          color="#999"
+          text="我是标题我是标题我是标题我是标题我是标题我是标题我是标题.pdf"
+        />
       </yl-default-card>
       <u-divider/>
     </view>
