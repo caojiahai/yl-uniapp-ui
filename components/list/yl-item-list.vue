@@ -51,6 +51,7 @@ export default {
     font-size: 28rpx;
     line-height: 40rpx;
     margin-right: 24rpx;
+    white-space: nowrap;
   }
 
   .item-value {

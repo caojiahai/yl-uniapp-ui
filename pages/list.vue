@@ -24,6 +24,20 @@
         </yl-item-list>
         <u-divider/>
         <yl-select-list :icon-name="'checkmark'" :selected="true" value="测试测试"/>
+        <u-divider :margin="0"/>
+        <yl-item-list label="任务附件">
+          <template #content>
+            <yl-ellipsis
+              :suffix-count="5"
+              color="#ff9438"
+              size="30rpx"
+              text="我是标题我是标题我是标题我是标题我是标题我是标题我是标题.pdf"
+            />
+            <view style="width: 20px; margin-left: 10px;">
+              <u-icon color="#ff9438" name="arrow-right" size="14"/>
+            </view>
+          </template>
+        </yl-item-list>
       </yl-default-card>
     </view>
   </view>
@@ -35,9 +49,11 @@ import YlItemLayoutList from "@/components/list/yl-item-layout-list.vue";
 import YlTabTag from "@/components/tag/yl-tab-tag.vue";
 import YlItemList from "@/components/list/yl-item-list.vue";
 import YlSelectList from "@/components/list/yl-select-list.vue";
+import YlEllipsis from "@/components/ellipsis/yl-ellipsis.vue";
 
 export default {
   components: {
+    YlEllipsis,
     YlSelectList,
     YlItemList,
     YlTabTag,
