@@ -7,6 +7,7 @@
     />
     <view style="margin-top: 44px;padding: 24rpx;">
       <yl-default-card>
+        <yl-default-list title="省略" @listClick="goNext('/pages/ellipsis')"/>
         <yl-default-list title="标签" @listClick="goNext('/pages/tag')"/>
         <yl-default-list title="进度" @listClick="goNext('/pages/progress')"/>
         <yl-default-list title="列表" @listClick="goNext('/pages/list')"/>

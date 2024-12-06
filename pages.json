@@ -68,6 +68,12 @@
       "style": {
         "navigationBarTitleText": "标题"
       }
+    },
+    {
+      "path": "pages/ellipsis",
+      "style": {
+        "navigationBarTitleText": "省略"
+      }
     }
   ],
   "globalStyle": {
