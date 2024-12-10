@@ -57,7 +57,7 @@ export default {
     height: 26rpx;
     line-height: 26rpx;
     color: #ff9438;
-    padding: 4rpx;
+    padding: 0 4rpx;
   }
 }
 </style>
