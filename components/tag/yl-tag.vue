@@ -1,6 +1,7 @@
 <template>
   <view
     :class="`${selected ? 'yl-tag-selected' : 'yl-tag-unselected'} ${ellipsis ? '' : 'yl-tag-ellipsis'}`"
+    :style="{ width: `${width}` }"
     class="yl-tag"
     @click="click"
   >
@@ -31,6 +32,11 @@ export default {
     // 标签标识
     name: {
       type: String | Number,
+      default: ""
+    },
+    // 标签宽度
+    width: {
+      type: String,
       default: ""
     },
   },
