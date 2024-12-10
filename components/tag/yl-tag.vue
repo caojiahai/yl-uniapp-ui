@@ -1,7 +1,7 @@
 <template>
   <view
     :class="`${selected ? 'yl-tag-selected' : 'yl-tag-unselected'} ${ellipsis ? '' : 'yl-tag-ellipsis'}`"
-    :style="{ width: `${width}` }"
+    :style="{ width: `${width}`, padding: noPadding ? 0 : '0 40rpx' }"
     class="yl-tag"
     @click="click"
   >
@@ -38,6 +38,11 @@ export default {
     width: {
       type: String,
       default: ""
+    },
+    // 无padding
+    noPadding: {
+      type: Boolean,
+      default: false
     },
   },
   data() {
