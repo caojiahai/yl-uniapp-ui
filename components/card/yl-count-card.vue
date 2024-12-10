@@ -1,5 +1,5 @@
 <template>
-  <view :style="{ background: selected ? '#ffffff' : 'unset' }" class="yl-count-card">
+  <view :style="{ background: selected ? '#ffffff' : 'unset' }" class="yl-count-card" @click="cardClick">
     <view :style="{ color: selected ? selectColor : valueColor }" class="count-value">{{ value }}</view>
     <view :style="{ color: selected ? selectColor : titleColor }" class="count-title">{{ title }}</view>
   </view>
@@ -44,7 +44,11 @@ export default {
   data() {
     return {};
   },
-  methods: {}
+  methods: {
+    cardClick() {
+      this.$emit("cardClick")
+    }
+  }
 };
 </script>
 <style lang="scss" scoped>
