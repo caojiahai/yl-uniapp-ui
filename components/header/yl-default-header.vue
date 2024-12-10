@@ -64,7 +64,6 @@ export default {
 </script>
 <style lang="scss" scoped>
 .yl-default-header {
-  background-color: #F9F9F9;
   height: 112rpx;
   border-bottom: 1rpx solid #DDDDDD;
   display: flex;
