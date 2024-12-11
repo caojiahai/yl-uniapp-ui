@@ -1,5 +1,5 @@
 <template>
-  <view :style="{ color: color, fontSize: size }" class="yl-ellipsis">
+  <view :style="{ color: color, fontSize: size }" class="yl-ellipsis" @click="ellipsisClick">
     <view class="ellipsis-text">{{ value }}</view>
     <view v-if="suffixCount > 0" class="ellipsis-suffix">{{ suffix }}</view>
   </view>
@@ -61,6 +61,9 @@ export default {
         this.value = this.text?.substring(0, len - this.suffixCount);
         this.suffix = this.text?.substring(len - this.suffixCount, len);
       }
+    },
+    ellipsisClick() {
+      this.$emit("click")
     }
   }
 };
