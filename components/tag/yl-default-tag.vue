@@ -2,7 +2,7 @@
   <text :style="{
     color: `${color}`,
     background: `${bgColor}`
-  }" class="yl-default-tag">
+  }" class="yl-default-tag" @click="tagClick">
     {{ title }}
   </text>
 </template>
@@ -31,7 +31,11 @@ export default {
   data() {
     return {};
   },
-  methods: {}
+  methods: {
+    tagClick() {
+      this.$emit('tagClick')
+    }
+  }
 };
 </script>
 <style lang="scss" scoped>
