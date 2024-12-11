@@ -114,6 +114,7 @@ export default {
       font-weight: 500;
       color: #ffffff;
       box-sizing: border-box;
+      z-index: 1;
     }
   }
 
