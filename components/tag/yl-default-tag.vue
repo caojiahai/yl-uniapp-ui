@@ -33,7 +33,7 @@ export default {
   },
   methods: {
     tagClick() {
-      this.$emit('tagClick')
+      this.$emit('click')
     }
   }
 };
