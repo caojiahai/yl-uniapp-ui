@@ -20,7 +20,7 @@ export default {
     },
     // 默认值
     value: {
-      type: String,
+      type: String | Number,
       default: ""
     },
     // 高度
