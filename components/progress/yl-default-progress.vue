@@ -8,14 +8,14 @@
     <view
       :style="{
         width: `${percentage}%`,
-        background: `linear-gradient(to ${lgDirection}, ${lgFormColor}, ${lgToColor})`
+        background: `linear-gradient(to ${lgDirection}, ${lgFormColor}, ${lgToColor})`,
       }"
       class="progress-value"
     >
       <view
         :style="{
           right: getPercentageStyle(),
-          backgroundColor: `${color}`
+          backgroundColor: `${color}`,
         }"
         class="progress-percentage"
       >
@@ -24,7 +24,7 @@
     </view>
     <view
       :style="{
-        border: `3rpx solid ${color}`
+        border: `3rpx solid ${color}`,
       }"
       class="progress-end"
     />
@@ -32,7 +32,7 @@
 </template>
 <script>
 export default {
-  name: "yl-default-progress",
+  name: 'yl-default-progress',
   props: {
     // 进度
     percentage: {
@@ -47,45 +47,45 @@ export default {
     // 默认颜色
     color: {
       type: String,
-      default: '#40C381'
+      default: '#40C381',
     },
     // 默认进度条背景色
     bgColor: {
       type: String,
-      default: '#EDEDED'
+      default: '#EDEDED',
     },
     // 渐变开始颜色
     lgFormColor: {
       type: String,
-      default: '#60BF0E'
+      default: '#60BF0E',
     },
     // 渐变结束颜色
     lgToColor: {
       type: String,
-      default: '#18BD6A'
+      default: '#18BD6A',
     },
     // 渐变方向
     lgDirection: {
       type: String,
-      default: 'right'
-    }
+      default: 'right',
+    },
   },
   data() {
-    return {};
+    return {}
   },
   methods: {
     getPercentageStyle() {
       // 防止进度块溢出
       if (this.percentage < 25) {
-        return '-70rpx';
+        return '-70rpx'
       } else if (this.percentage > 75) {
-        return '0rpx';
+        return '0rpx'
       } else {
-        return '-35rpx';
+        return '-35rpx'
       }
-    }
-  }
-};
+    },
+  },
+}
 </script>
 <style lang="scss" scoped>
 .yl-default-progress {
@@ -107,7 +107,7 @@ export default {
       width: 70rpx;
       height: 32rpx;
       border-radius: 30rpx;
-      border: 2rpx solid #FFFFFF;
+      border: 2rpx solid #ffffff;
       text-align: center;
       line-height: 32rpx;
       font-size: 24rpx;

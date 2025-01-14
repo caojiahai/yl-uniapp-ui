@@ -9,35 +9,35 @@
 </template>
 <script>
 export default {
-  name: "yl-item-list",
+  name: 'yl-item-list',
   computed: {},
   components: {},
   props: {
     // 标签名称
     label: {
       type: String,
-      default: ""
+      default: '',
     },
     // 默认值
     value: {
       type: String | Number,
-      default: ""
+      default: '',
     },
     // 高度
     itemHeight: {
       type: String,
-      default: '72rpx'
+      default: '72rpx',
     },
   },
   data() {
-    return {};
+    return {}
   },
   methods: {
     click() {
       this.$emit('listClick', this.name ?? '')
-    }
-  }
-};
+    },
+  },
+}
 </script>
 <style lang="scss" scoped>
 .yl-item-list {

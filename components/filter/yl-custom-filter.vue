@@ -3,12 +3,17 @@
     <template>
       <slot name="content"></slot>
     </template>
-    <view v-if="show" :style="{ height: `calc(100vh - ${bgHeight}rpx)` }" class="item_popup_bg" @click="close"/>
+    <view
+      v-if="show"
+      :style="{ height: `calc(100vh - ${bgHeight}rpx)` }"
+      class="item_popup_bg"
+      @click="close"
+    />
     <view
       v-if="show"
       :style="{
         borderBottomLeftRadius: `${popupRound}rpx`,
-        borderBottomRightRadius: `${popupRound}rpx`
+        borderBottomRightRadius: `${popupRound}rpx`,
       }"
       class="item_popup"
     >
@@ -20,37 +25,36 @@
 </template>
 <script>
 export default {
-  name: "yl-custom-filter",
+  name: 'yl-custom-filter',
   components: {},
   props: {
     // 是否显示
     show: {
       type: Boolean,
-      default: false
+      default: false,
     },
     // 背景高度
     bgHeight: {
       type: Number,
-      default: 0
+      default: 0,
     },
     popupRound: {
       type: Number,
-      default: 0
-    }
+      default: 0,
+    },
   },
   data() {
-    return {};
+    return {}
   },
-  mounted() {
-  },
+  mounted() {},
   watch: {},
   computed: {},
   methods: {
     close() {
-      this.$emit("close")
-    }
-  }
-};
+      this.$emit('close')
+    },
+  },
+}
 </script>
 <style lang="scss" scoped>
 .yl-custom-filter {

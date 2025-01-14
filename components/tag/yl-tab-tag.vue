@@ -1,36 +1,46 @@
 <template>
-  <view :style="{ border: `1rpx solid ${color}`}" class="yl-tab-tag">
-    <view v-if="title" :style="{ backgroundColor: `${color}`}" class="tab-title">{{ title }}</view>
-    <view v-if="subTitle" :style="{ color: `${color}`}" class="tab-sub-title">{{ subTitle }}</view>
+  <view :style="{ border: `1rpx solid ${color}` }" class="yl-tab-tag">
+    <view
+      v-if="title"
+      :style="{ backgroundColor: `${color}` }"
+      class="tab-title"
+      >{{ title }}</view
+    >
+    <view
+      v-if="subTitle"
+      :style="{ color: `${color}` }"
+      class="tab-sub-title"
+      >{{ subTitle }}</view
+    >
   </view>
 </template>
 <script>
 export default {
-  name: "yl-tab-tag",
+  name: 'yl-tab-tag',
   computed: {},
   components: {},
   props: {
     // 标题
     title: {
       type: String,
-      default: ''
+      default: '',
     },
     // 副标题
     subTitle: {
       type: String,
-      default: ''
+      default: '',
     },
     // 颜色
     color: {
       type: String,
-      default: '#ff9438'
+      default: '#ff9438',
     },
   },
   data() {
-    return {};
+    return {}
   },
-  methods: {}
-};
+  methods: {},
+}
 </script>
 <style lang="scss" scoped>
 .yl-tab-tag {
@@ -41,7 +51,7 @@ export default {
   box-sizing: border-box;
 
   .tab-title {
-    color: #FFFFFF;
+    color: #ffffff;
     font-size: 20rpx;
     font-weight: 400;
     height: 26rpx;
@@ -51,7 +61,7 @@ export default {
   }
 
   .tab-sub-title {
-    background-color: #FFFFFF;
+    background-color: #ffffff;
     font-size: 20rpx;
     font-weight: 400;
     height: 26rpx;

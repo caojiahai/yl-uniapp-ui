@@ -18,7 +18,7 @@
 </template>
 <script>
 export default {
-  name: "yl-form-item-input",
+  name: 'yl-form-item-input',
   props: {
     // 标题
     title: {
@@ -48,33 +48,34 @@ export default {
   },
   computed: {},
   mounted() {
-    this.value = this.defaultValue;
+    this.value = this.defaultValue
   },
   watch: {
-    'defaultValue': {
+    defaultValue: {
       handler(val) {
-        this.value = val;
+        this.value = val
       },
-      deep: true
-    }
+      deep: true,
+    },
   },
   data() {
     return {
       value: '', // 当前选中
-    };
+    }
   },
   methods: {
     click() {
-      this.$emit('itemClick');
-    }
-  }
-};
+      this.$emit('itemClick')
+    },
+  },
+}
 </script>
 <style lang="scss" scoped>
 .yl-form-item-input {
   background-color: #ffffff;
 
-  .uni-input-placeholder, .input-placeholder {
+  .uni-input-placeholder,
+  .input-placeholder {
     color: #999999 !important;
   }
 
@@ -89,7 +90,7 @@ export default {
       color: #666666;
 
       text {
-        color: #FF3131;
+        color: #ff3131;
       }
     }
 
@@ -125,6 +126,4 @@ export default {
     }
   }
 }
-
-
 </style>

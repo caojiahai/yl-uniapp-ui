@@ -1,55 +1,67 @@
 <template>
-  <view :style="{ background: selected ? '#ffffff' : 'unset' }" class="yl-count-card" @click="cardClick">
-    <view :style="{ color: selected ? selectColor : valueColor }" class="count-value">{{ value }}</view>
-    <view :style="{ color: selected ? selectColor : titleColor }" class="count-title">{{ title }}</view>
+  <view
+    :style="{ background: selected ? '#ffffff' : 'unset' }"
+    class="yl-count-card"
+    @click="cardClick"
+  >
+    <view
+      :style="{ color: selected ? selectColor : valueColor }"
+      class="count-value"
+      >{{ value }}</view
+    >
+    <view
+      :style="{ color: selected ? selectColor : titleColor }"
+      class="count-title"
+      >{{ title }}</view
+    >
   </view>
 </template>
 <script>
 export default {
-  name: "yl-count-card",
+  name: 'yl-count-card',
   computed: {},
   components: {},
   props: {
     // 标题
     title: {
       type: String,
-      default: ""
+      default: '',
     },
     // 标题
     value: {
       type: Number,
-      default: 0
+      default: 0,
     },
     // 颜色
     valueColor: {
       type: String,
-      default: '#634D3E'
+      default: '#634D3E',
     },
     // 颜色
     titleColor: {
       type: String,
-      default: '#AB8864'
+      default: '#AB8864',
     },
     // 选中颜色
     selectColor: {
       type: String,
-      default: '#FF9438'
+      default: '#FF9438',
     },
     // 选中
     selected: {
       type: Boolean,
-      default: false
-    }
+      default: false,
+    },
   },
   data() {
-    return {};
+    return {}
   },
   methods: {
     cardClick() {
-      this.$emit("cardClick")
-    }
-  }
-};
+      this.$emit('cardClick')
+    },
+  },
+}
 </script>
 <style lang="scss" scoped>
 .yl-count-card {
@@ -59,7 +71,7 @@ export default {
   width: 152rpx;
   min-width: 152rpx;
   height: 108rpx;
-  border: 1rpx solid #FFFFFF;
+  border: 1rpx solid #ffffff;
   border-radius: 16rpx;
 
   .count-value {

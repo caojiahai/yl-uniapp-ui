@@ -1,48 +1,51 @@
 <template>
   <view class="yl-select-list" @click="click">
-    <text :class="selected ? 'text-selected' : 'text-un-select'" class="text-ellipsis ">
+    <text
+      :class="selected ? 'text-selected' : 'text-un-select'"
+      class="text-ellipsis"
+    >
       {{ value }}
     </text>
     <view class="text-icon">
-      <u-icon v-if="selected" :name="iconName" color="#ff9438" size="20"/>
+      <u-icon v-if="selected" :name="iconName" color="#ff9438" size="20" />
     </view>
   </view>
 </template>
 <script>
 export default {
-  name: "yl-select-list",
+  name: 'yl-select-list',
   computed: {},
   components: {},
   props: {
     // 是否选中
     selected: {
       type: Boolean,
-      default: false
+      default: false,
     },
     value: {
       type: String,
-      default: ""
+      default: '',
     },
     // 列表标识
     name: {
       type: String | Number,
-      default: ""
+      default: '',
     },
     // 列表标识
     iconName: {
       type: String,
-      default: "checkmark-circle-fill"
+      default: 'checkmark-circle-fill',
     },
   },
   data() {
-    return {};
+    return {}
   },
   methods: {
     click() {
       this.$emit('listClick', this.name ?? '')
-    }
-  }
-};
+    },
+  },
+}
 </script>
 <style lang="scss" scoped>
 .yl-select-list {
@@ -65,7 +68,7 @@ export default {
   }
 
   .text-selected {
-    color: #FF9438;
+    color: #ff9438;
     font-size: 28rpx;
   }
 

@@ -6,26 +6,26 @@
 </template>
 <script>
 export default {
-  name: "yl-default-card",
+  name: 'yl-default-card',
   computed: {},
   components: {},
   props: {
     // 标题
     title: {
       type: String,
-      default: ""
+      default: '',
     },
     // 无padding
     noPadding: {
       type: Boolean,
-      default: false
+      default: false,
     },
   },
   data() {
-    return {};
+    return {}
   },
-  methods: {}
-};
+  methods: {},
+}
 </script>
 <style lang="scss" scoped>
 .yl-default-card {

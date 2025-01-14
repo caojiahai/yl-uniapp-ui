@@ -8,21 +8,21 @@
 </template>
 <script>
 export default {
-  name: "yl-item-layout-list",
+  name: 'yl-item-layout-list',
   computed: {},
   components: {},
   props: {
     // 标签名称
     label: {
       type: String,
-      default: ""
+      default: '',
     },
   },
   data() {
-    return {};
+    return {}
   },
-  methods: {}
-};
+  methods: {},
+}
 </script>
 <style lang="scss" scoped>
 .yl-item-layout-list {

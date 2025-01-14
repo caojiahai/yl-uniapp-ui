@@ -1,10 +1,6 @@
 <template>
   <view class="yl-count-down">
-    <view
-      v-for="(x, index) in countDays"
-      :key="`${index + 'day'}`"
-      class="box"
-    >
+    <view v-for="(x, index) in countDays" :key="`${index + 'day'}`" class="box">
       {{ x }}
     </view>
     <view class="text">天</view>
@@ -35,71 +31,77 @@
   </view>
 </template>
 <script>
-import dayjs from "dayjs";
+import dayjs from 'dayjs'
 
 export default {
-  name: "yl-count-down",
+  name: 'yl-count-down',
   props: {
     // 倒计时结束时间
     endTime: {
       type: String,
-      default: "",
+      default: '',
     },
   },
   data() {
     return {
-      countDays: ["0", "0"],
-      countHours: ["0", "0"],
-      countMinutes: ["0", "0"],
-      countSeconds: ["0", "0"],
+      countDays: ['0', '0'],
+      countHours: ['0', '0'],
+      countMinutes: ['0', '0'],
+      countSeconds: ['0', '0'],
       timer: null, // 倒计时
       show: false, // 是否显示
-    };
+    }
   },
   mounted() {
-    clearInterval(this.timer);
-    this.getDateCountDown();
+    clearInterval(this.timer)
+    this.getDateCountDown()
   },
   unmounted() {
-    clearInterval(this.timer);
+    clearInterval(this.timer)
   },
   methods: {
     updateCount() {
-      if (!this.endTime) return false;
-      if (dayjs().isAfter(this.endTime)) return false;
-      const countDownDate = dayjs(this.endTime).valueOf();
-      const now = new Date().getTime();
-      const distance = countDownDate - now;
+      if (!this.endTime) return false
+      if (dayjs().isAfter(this.endTime)) return false
+      const countDownDate = dayjs(this.endTime).valueOf()
+      const now = new Date().getTime()
+      const distance = countDownDate - now
 
-      this.show = distance > 0;
+      this.show = distance > 0
 
       // 时间计算
-      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+      const days = Math.floor(distance / (1000 * 60 * 60 * 24))
+      const hours = Math.floor(
+        (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60),
+      )
+      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60))
+      const seconds = Math.floor((distance % (1000 * 60)) / 1000)
 
-      this.countDays = (days < 10 ? `0${days}` : `${days}`).split("");
-      this.countHours = (hours < 10 ? `0${hours}` : `${hours}`).split("");
-      this.countMinutes = (minutes < 10 ? `0${minutes}` : `${minutes}`).split("");
-      this.countSeconds = (seconds < 10 ? `0${seconds}` : `${seconds}`).split("");
+      this.countDays = (days < 10 ? `0${days}` : `${days}`).split('')
+      this.countHours = (hours < 10 ? `0${hours}` : `${hours}`).split('')
+      this.countMinutes = (minutes < 10 ? `0${minutes}` : `${minutes}`).split(
+        '',
+      )
+      this.countSeconds = (seconds < 10 ? `0${seconds}` : `${seconds}`).split(
+        '',
+      )
 
       // 如果倒计时结束，写一些文本
       if (distance < 0) {
-        clearInterval(this.timer);
+        clearInterval(this.timer)
       }
     },
     getDateCountDown() {
-      let t = this;
-      clearInterval(this.timer);
-      t.updateCount();
+      let t = this
+      clearInterval(this.timer)
+      t.updateCount()
       // 更新倒计时每一秒
       this.timer = setInterval(() => {
-        t.updateCount();
-      }, 1000);
+        t.updateCount()
+      }, 1000)
     },
   },
-};
+}
 </script>
 <style lang="scss" scoped>
 .yl-count-down {

@@ -1,35 +1,39 @@
 <template>
-  <view :style="{ height: `${itemHeight}` }" class="yl-default-list" @tap="click">
+  <view
+    :style="{ height: `${itemHeight}` }"
+    class="yl-default-list"
+    @tap="click"
+  >
     <view class="item-title">{{ title }}</view>
     <view class="item-right">
       <view v-if="value" class="item-value item-ellipsis">{{ value }}</view>
       <view v-if="placeholder" class="item-placeholder">{{ placeholder }}</view>
       <view class="item-icon">
-        <u-icon v-if="rightIcon" color="#999999" name="arrow-right" size="14"/>
+        <u-icon v-if="rightIcon" color="#999999" name="arrow-right" size="14" />
       </view>
     </view>
   </view>
 </template>
 <script>
 export default {
-  name: "yl-default-list",
+  name: 'yl-default-list',
   computed: {},
   components: {},
   props: {
     // 标签名称
     title: {
       type: String,
-      default: ""
+      default: '',
     },
     // 默认值
     value: {
       type: String,
-      default: ""
+      default: '',
     },
     // 高度
     itemHeight: {
       type: String,
-      default: '96rpx'
+      default: '96rpx',
     },
     // 是否显示右侧显示向右箭头
     rightIcon: {
@@ -39,18 +43,18 @@ export default {
     // placeholder
     placeholder: {
       type: String,
-      default: ""
-    }
+      default: '',
+    },
   },
   data() {
-    return {};
+    return {}
   },
   methods: {
     click() {
       this.$emit('listClick')
-    }
-  }
-};
+    },
+  },
+}
 </script>
 <style lang="scss" scoped>
 .yl-default-list {

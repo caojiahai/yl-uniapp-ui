@@ -5,12 +5,21 @@
         <text v-if="required">*</text>
         {{ title }}
       </view>
-      <view :style="{ justifyContent: justifyContent }" class="item-content" @click="click">
-        <text :class="value ? 'item-value': 'item-placeholder'">
+      <view
+        :style="{ justifyContent: justifyContent }"
+        class="item-content"
+        @click="click"
+      >
+        <text :class="value ? 'item-value' : 'item-placeholder'">
           {{ value ? value : placeholder }}
         </text>
         <view class="item-icon">
-          <u-icon v-if="rightIcon" color="#999999" name="arrow-right" size="14"/>
+          <u-icon
+            v-if="rightIcon"
+            color="#999999"
+            name="arrow-right"
+            size="14"
+          />
         </view>
       </view>
     </view>
@@ -21,7 +30,7 @@
 </template>
 <script>
 export default {
-  name: "yl-form-item",
+  name: 'yl-form-item',
   props: {
     // 标题
     title: {
@@ -56,27 +65,27 @@ export default {
   },
   computed: {},
   mounted() {
-    this.value = this.defaultValue;
+    this.value = this.defaultValue
   },
   watch: {
-    'defaultValue': {
+    defaultValue: {
       handler(val) {
-        this.value = val;
+        this.value = val
       },
-      deep: true
-    }
+      deep: true,
+    },
   },
   data() {
     return {
       value: '', // 当前选中
-    };
+    }
   },
   methods: {
     click() {
-      this.$emit('itemClick');
-    }
-  }
-};
+      this.$emit('itemClick')
+    },
+  },
+}
 </script>
 <style lang="scss" scoped>
 .yl-form-item {
@@ -93,7 +102,7 @@ export default {
       color: #666666;
 
       text {
-        color: #FF3131;
+        color: #ff3131;
       }
     }
 

@@ -13,26 +13,26 @@
 </template>
 <script>
 export default {
-  name: "yl-default-title",
+  name: 'yl-default-title',
   computed: {},
   components: {},
   props: {
     // 标题
     title: {
       type: String,
-      default: ""
+      default: '',
     },
     // 高度
     titleHeight: {
       type: String,
-      default: '60rpx'
+      default: '60rpx',
     },
   },
   data() {
-    return {};
+    return {}
   },
-  methods: {}
-};
+  methods: {},
+}
 </script>
 <style lang="scss" scoped>
 .yl-default-title {

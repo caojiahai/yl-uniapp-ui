@@ -10,50 +10,50 @@
 </template>
 <script>
 export default {
-  name: "yl-tag",
+  name: 'yl-tag',
   computed: {},
   components: {},
   props: {
     // 标题
     title: {
       type: String,
-      default: ""
+      default: '',
     },
     // 是否超出隐藏、默认超出隐藏
     ellipsis: {
       type: Boolean,
-      default: false
+      default: false,
     },
     // 是否隐藏
     selected: {
       type: Boolean,
-      default: false
+      default: false,
     },
     // 标签标识
     name: {
       type: String | Number,
-      default: ""
+      default: '',
     },
     // 标签宽度
     width: {
       type: String,
-      default: ""
+      default: '',
     },
     // 无padding
     noPadding: {
       type: Boolean,
-      default: false
+      default: false,
     },
   },
   data() {
-    return {};
+    return {}
   },
   methods: {
     click() {
       this.$emit('tagClick', this.name ?? '')
-    }
-  }
-};
+    },
+  },
+}
 </script>
 <style lang="scss" scoped>
 .yl-tag {
@@ -74,7 +74,7 @@ export default {
 }
 
 .yl-tag-selected {
-  background-color: #FF94381A;
+  background-color: #ff94381a;
   border: 1rpx solid #ff9438;
   color: #ff9438;
 }

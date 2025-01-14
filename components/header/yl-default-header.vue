@@ -19,53 +19,53 @@
 </template>
 <script>
 export default {
-  name: "yl-default-header",
+  name: 'yl-default-header',
   computed: {},
   components: {},
   props: {
     // 标题
     title: {
       type: String,
-      default: ""
+      default: '',
     },
     // 左侧按钮文本
     leftTitle: {
       type: String,
-      default: "取消"
+      default: '取消',
     },
     // 右侧按钮文本
     rightTitle: {
       type: String,
-      default: "确定"
+      default: '确定',
     },
     // 左侧按钮颜色
     leftColor: {
       type: String,
-      default: "#999999"
+      default: '#999999',
     },
     // 右侧按钮颜色
     rightColor: {
       type: String,
-      default: "#ff9438"
+      default: '#ff9438',
     },
   },
   data() {
-    return {};
+    return {}
   },
   methods: {
     leftClick() {
-      this.$emit("leftClick")
+      this.$emit('leftClick')
     },
     rightClick() {
-      this.$emit("rightClick")
-    }
-  }
-};
+      this.$emit('rightClick')
+    },
+  },
+}
 </script>
 <style lang="scss" scoped>
 .yl-default-header {
   height: 112rpx;
-  border-bottom: 1rpx solid #DDDDDD;
+  border-bottom: 1rpx solid #dddddd;
   display: flex;
   align-items: center;
   padding: 0 32rpx;

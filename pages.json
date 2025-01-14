@@ -1,87 +1,87 @@
 {
   "easycom": {
-    "^u-(.*)": "uview-ui/components/u-$1/u-$1.vue"
+	"^u-(.*)": "uview-ui/components/u-$1/u-$1.vue"
   },
   "pages": [
-    {
-      "path": "pages/index",
-      "style": {
-        "navigationBarTitleText": "首页"
-      }
-    },
-    {
-      "path": "pages/tag",
-      "style": {
-        "navigationBarTitleText": "标签"
-      }
-    },
-    {
-      "path": "pages/progress",
-      "style": {
-        "navigationBarTitleText": "进度"
-      }
-    },
-    {
-      "path": "pages/list",
-      "style": {
-        "navigationBarTitleText": "列表"
-      }
-    },
-    {
-      "path": "pages/card",
-      "style": {
-        "navigationBarTitleText": "卡片"
-      }
-    },
-    {
-      "path": "pages/count",
-      "style": {
-        "navigationBarTitleText": "倒计时"
-      }
-    },
-    {
-      "path": "pages/date",
-      "style": {
-        "navigationBarTitleText": "日期"
-      }
-    },
-    {
-      "path": "pages/filter",
-      "style": {
-        "navigationBarTitleText": "过滤"
-      }
-    },
-    {
-      "path": "pages/form-item",
-      "style": {
-        "navigationBarTitleText": "表单子项"
-      }
-    },
-    {
-      "path": "pages/header",
-      "style": {
-        "navigationBarTitleText": "头部"
-      }
-    },
-    {
-      "path": "pages/title",
-      "style": {
-        "navigationBarTitleText": "标题"
-      }
-    },
-    {
-      "path": "pages/ellipsis",
-      "style": {
-        "navigationBarTitleText": "省略"
-      }
-    }
+	{
+	  "path": "pages/index",
+	  "style": {
+		"navigationBarTitleText": "首页"
+	  }
+	},
+	{
+	  "path": "pages/tag",
+	  "style": {
+		"navigationBarTitleText": "标签"
+	  }
+	},
+	{
+	  "path": "pages/progress",
+	  "style": {
+		"navigationBarTitleText": "进度"
+	  }
+	},
+	{
+	  "path": "pages/list",
+	  "style": {
+		"navigationBarTitleText": "列表"
+	  }
+	},
+	{
+	  "path": "pages/card",
+	  "style": {
+		"navigationBarTitleText": "卡片"
+	  }
+	},
+	{
+	  "path": "pages/count",
+	  "style": {
+		"navigationBarTitleText": "倒计时"
+	  }
+	},
+	{
+	  "path": "pages/date",
+	  "style": {
+		"navigationBarTitleText": "日期"
+	  }
+	},
+	{
+	  "path": "pages/filter",
+	  "style": {
+		"navigationBarTitleText": "过滤"
+	  }
+	},
+	{
+	  "path": "pages/form-item",
+	  "style": {
+		"navigationBarTitleText": "表单子项"
+	  }
+	},
+	{
+	  "path": "pages/header",
+	  "style": {
+		"navigationBarTitleText": "头部"
+	  }
+	},
+	{
+	  "path": "pages/title",
+	  "style": {
+		"navigationBarTitleText": "标题"
+	  }
+	},
+	{
+	  "path": "pages/ellipsis",
+	  "style": {
+		"navigationBarTitleText": "省略"
+	  }
+	}
   ],
   "globalStyle": {
-    "navigationBarTextStyle": "black",
-    "navigationBarTitleText": "yl-uniapp-ui",
-    "navigationBarBackgroundColor": "#F8F8F8",
-    "backgroundColor": "#F8F8F8",
-    "navigationStyle": "custom"
+	"navigationBarTextStyle": "black",
+	"navigationBarTitleText": "yl-uniapp-ui",
+	"navigationBarBackgroundColor": "#F8F8F8",
+	"backgroundColor": "#F8F8F8",
+	"navigationStyle": "custom"
   },
   "uniIdRouter": {}
 }

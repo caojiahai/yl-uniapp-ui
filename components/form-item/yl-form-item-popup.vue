@@ -5,23 +5,38 @@
         <text v-if="required">*</text>
         {{ title }}
       </view>
-      <view :style="{ justifyContent: justifyContent }" class="item-content" @click="showPopup">
-        <text :class="value ? 'item-value': 'item-placeholder'">
+      <view
+        :style="{ justifyContent: justifyContent }"
+        class="item-content"
+        @click="showPopup"
+      >
+        <text :class="value ? 'item-value' : 'item-placeholder'">
           {{ value ? value : placeholder }}
         </text>
         <view class="item-icon">
-          <u-icon v-if="rightIcon" color="#999999" name="arrow-right" size="14"/>
+          <u-icon
+            v-if="rightIcon"
+            color="#999999"
+            name="arrow-right"
+            size="14"
+          />
         </view>
       </view>
     </view>
-    <u-popup :mode="popupMode" :round="popupRound" :show="show" closeOnClickOverlay @close="closePopup">
+    <u-popup
+      :mode="popupMode"
+      :round="popupRound"
+      :show="show"
+      closeOnClickOverlay
+      @close="closePopup"
+    >
       <slot></slot>
     </u-popup>
   </view>
 </template>
 <script>
 export default {
-  name: "yl-form-item-popup",
+  name: 'yl-form-item-popup',
   props: {
     // 标题
     title: {
@@ -61,48 +76,48 @@ export default {
     // popup round
     popupRound: {
       type: Number,
-      default: 0
+      default: 0,
     },
     // popup show
     popupShow: {
       type: Boolean,
-      default: false
-    }
+      default: false,
+    },
   },
   computed: {},
   mounted() {
-    this.show = this.popupShow;
-    this.value = this.defaultValue;
+    this.show = this.popupShow
+    this.value = this.defaultValue
   },
   watch: {
-    'popupShow': {
+    popupShow: {
       handler(val) {
-        this.show = val;
+        this.show = val
       },
-      deep: true
+      deep: true,
     },
-    'defaultValue': {
+    defaultValue: {
       handler(val) {
-        this.value = val;
+        this.value = val
       },
-      deep: true
-    }
+      deep: true,
+    },
   },
   data() {
     return {
       value: '', // 当前选中
       show: false,
-    };
+    }
   },
   methods: {
     showPopup() {
-      this.$emit('showPopup');
+      this.$emit('showPopup')
     },
     closePopup() {
       this.$emit('closePopup')
     },
-  }
-};
+  },
+}
 </script>
 <style lang="scss" scoped>
 .yl-form-item-popup {
@@ -119,7 +134,7 @@ export default {
       color: #666666;
 
       text {
-        color: #FF3131;
+        color: #ff3131;
       }
     }
 

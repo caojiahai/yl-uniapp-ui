@@ -3,7 +3,7 @@
     <view class="title-left">
       <view class="title">
         {{ title }}
-        <text v-if="required" style="color: #FF4910;margin-left: 8rpx;">*</text>
+        <text v-if="required" style="color: #ff4910; margin-left: 8rpx">*</text>
       </view>
     </view>
     <template>
@@ -13,19 +13,19 @@
 </template>
 <script>
 export default {
-  name: "yl-form-title",
+  name: 'yl-form-title',
   computed: {},
   components: {},
   props: {
     // 标题
     title: {
       type: String,
-      default: ""
+      default: '',
     },
     // 高度
     titleHeight: {
       type: String,
-      default: '60rpx'
+      default: '60rpx',
     },
     // 是否必填，显示*
     required: {
@@ -34,10 +34,10 @@ export default {
     },
   },
   data() {
-    return {};
+    return {}
   },
-  methods: {}
-};
+  methods: {},
+}
 </script>
 <style lang="scss" scoped>
 .yl-form-title {

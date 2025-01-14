@@ -13,17 +13,17 @@
   </view>
 </template>
 <script>
-import dayjs from "dayjs";
+import dayjs from 'dayjs'
 
 export default {
-  name: "yl-custom-date",
+  name: 'yl-custom-date',
   computed: {},
   components: {},
   props: {
     // 是否显示
     show: {
       type: Boolean,
-      default: false
+      default: false,
     },
     // 默认显示日期
     defaultValue: {
@@ -32,27 +32,27 @@ export default {
     },
   },
   watch: {
-    'defaultValue': {
+    defaultValue: {
       handler(newVal) {
-        this.value = dayjs(newVal).valueOf();
+        this.value = dayjs(newVal).valueOf()
       },
-      deep: true
-    }
+      deep: true,
+    },
   },
   data() {
     return {
-      value: dayjs(this.defaultValue ?? '').valueOf()
-    };
+      value: dayjs(this.defaultValue ?? '').valueOf(),
+    }
   },
   methods: {
     cancel() {
-      this.$emit('cancel');
+      this.$emit('cancel')
     },
     confirm(e) {
-      this.$emit('confirm', dayjs(e.value).format('YYYY-MM-DD'));
+      this.$emit('confirm', dayjs(e.value).format('YYYY-MM-DD'))
     },
-  }
-};
+  },
+}
 </script>
 <style lang="scss" scoped>
 .yl-custom-date {

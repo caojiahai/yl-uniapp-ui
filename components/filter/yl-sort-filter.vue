@@ -3,62 +3,70 @@
     <view class="sort_btn" @tap.stop="sortChange">
       <text>{{ title || '排序' }}</text>
       <view>
-        <u-icon :color="sort === 'asc' ? '#333333': '#999999'" name="arrow-up-fill" size="8"/>
-        <u-icon :color="sort === 'desc' ? '#333333': '#999999'" name="arrow-down-fill" size="8"/>
+        <u-icon
+          :color="sort === 'asc' ? '#333333' : '#999999'"
+          name="arrow-up-fill"
+          size="8"
+        />
+        <u-icon
+          :color="sort === 'desc' ? '#333333' : '#999999'"
+          name="arrow-down-fill"
+          size="8"
+        />
       </view>
     </view>
   </view>
 </template>
 <script>
 export default {
-  name: "yl-sort-filter",
+  name: 'yl-sort-filter',
   computed: {},
   components: {},
   props: {
     // 按钮文本
     title: {
       type: String,
-      default: ""
+      default: '',
     },
     // 默认排序
     defaultSort: {
       type: String,
-      default: ""
+      default: '',
     },
   },
   watch: {
-    'defaultSort': {
+    defaultSort: {
       handler() {
-        this.sort = this.defaultSort;
+        this.sort = this.defaultSort
       },
-      deep: true
+      deep: true,
     },
   },
   mounted() {
-    this.sort = this.defaultSort;
+    this.sort = this.defaultSort
   },
   data() {
     return {
-      sort: "", // asc、desc
-    };
+      sort: '', // asc、desc
+    }
   },
   methods: {
     sortChange() {
       switch (this.sort) {
-        case "asc":
-          this.sort = "desc";
-          break;
-        case "desc":
-          this.sort = "";
-          break;
+        case 'asc':
+          this.sort = 'desc'
+          break
+        case 'desc':
+          this.sort = ''
+          break
         default:
-          this.sort = "asc";
-          break;
+          this.sort = 'asc'
+          break
       }
-      this.$emit("change", this.sort)
-    }
-  }
-};
+      this.$emit('change', this.sort)
+    },
+  },
+}
 </script>
 <style lang="scss" scoped>
 .yl-sort-filter {

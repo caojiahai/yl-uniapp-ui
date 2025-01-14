@@ -2,7 +2,7 @@
   <view class="yl-select-filter">
     <view class="filter_btn" @tap.stop="show = true">
       <text>{{ title || '选择' }}</text>
-      <u-icon :name="iconName || 'arrow-down'" color="#999999" size="12"/>
+      <u-icon :name="iconName || 'arrow-down'" color="#999999" size="12" />
     </view>
     <u-picker
       ref="uPicker"
@@ -20,71 +20,74 @@
 </template>
 <script>
 export default {
-  name: "yl-select-filter",
+  name: 'yl-select-filter',
   computed: {},
   components: {},
   props: {
     // 按钮文本
     title: {
       type: String,
-      default: ""
+      default: '',
     },
     // 传入列表
     itemList: {
       type: Array,
-      default: ""
+      default: '',
     },
     // 取消按钮文本
     cancelText: {
       type: String,
-      default: ""
+      default: '',
     },
     // 确认按钮文本
     confirmText: {
       type: String,
-      default: ""
+      default: '',
     },
     // 图标name
     iconName: {
       type: String,
-      default: ""
+      default: '',
     },
     // keyName
     keyName: {
       type: String,
-      default: ""
+      default: '',
     },
   },
   watch: {
-    'itemList': {
+    itemList: {
       handler() {
-        this.columns = [[...this.itemList || []]];
+        this.columns = [[...(this.itemList || [])]]
       },
-      deep: true
+      deep: true,
     },
   },
   mounted() {
-    this.columns = [[...this.itemList || []]];
+    this.columns = [[...(this.itemList || [])]]
   },
   data() {
     return {
       show: false,
       defaultIndex: 0,
       columns: [],
-    };
+    }
   },
   methods: {
     cancel() {
-      this.show = false;
-      this.$refs.uPicker.setIndexs([this.defaultIndex]);
-      this.$emit('confirm', this.columns?.[this.defaultIndex]?.[this.defaultIndex])
+      this.show = false
+      this.$refs.uPicker.setIndexs([this.defaultIndex])
+      this.$emit(
+        'confirm',
+        this.columns?.[this.defaultIndex]?.[this.defaultIndex],
+      )
     },
     confirm(e) {
-      this.show = false;
+      this.show = false
       this.$emit('confirm', e?.value?.[0])
-    }
-  }
-};
+    },
+  },
+}
 </script>
 <style lang="scss" scoped>
 .yl-select-filter {

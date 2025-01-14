@@ -1,9 +1,14 @@
 <template>
   <view className="home">
-    <u-navbar :autoBack="true" title="日期"/>
-    <view style="margin-top: 44px;padding: 24rpx;background-color: #f8f8f8;">
+    <u-navbar :autoBack="true" title="日期" />
+    <view style="margin-top: 44px; padding: 24rpx; background-color: #f8f8f8">
       <yl-default-card>
-        <yl-custom-date :default-value="date" :show="show" @cancel="show = false" @confirm="confirm">
+        <yl-custom-date
+          :default-value="date"
+          :show="show"
+          @cancel="show = false"
+          @confirm="confirm"
+        >
           <template #content>
             <view @click="show = true">{{ date }}</view>
           </template>
@@ -13,27 +18,27 @@
   </view>
 </template>
 <script>
-import YlDefaultCard from "@/components/card/yl-default-card.vue";
-import YlCustomDate from "@/components/date/yl-custom-date.vue";
+import YlDefaultCard from '@/components/card/yl-default-card.vue'
+import YlCustomDate from '@/components/date/yl-custom-date.vue'
 
 export default {
   components: {
     YlCustomDate,
-    YlDefaultCard
+    YlDefaultCard,
   },
   data() {
     return {
       show: false,
-      date: '2024-11-29'
+      date: '2024-11-29',
     }
   },
   methods: {
     confirm(val) {
       console.log('confirm:', val)
-      this.date = val;
-      this.show = false;
-    }
-  }
+      this.date = val
+      this.show = false
+    },
+  },
 }
 </script>
 <style scoped>

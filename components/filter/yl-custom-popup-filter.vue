@@ -18,14 +18,14 @@
 </template>
 <script>
 export default {
-  name: "yl-custom-popup-filter",
+  name: 'yl-custom-popup-filter',
   computed: {},
   components: {},
   props: {
     // 是否显示
     show: {
       type: Boolean,
-      default: false
+      default: false,
     },
     // popup mode
     popupMode: {
@@ -35,23 +35,23 @@ export default {
     // popup round
     popupRound: {
       type: Number,
-      default: 0
+      default: 0,
     },
     // popup show
     popupShow: {
       type: Boolean,
-      default: false
-    }
+      default: false,
+    },
   },
   data() {
-    return {};
+    return {}
   },
   methods: {
     close() {
-      this.$emit('close');
-    }
-  }
-};
+      this.$emit('close')
+    },
+  },
+}
 </script>
 <style lang="scss" scoped>
 .yl-custom-popup-filter {

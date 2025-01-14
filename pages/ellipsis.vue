@@ -1,40 +1,40 @@
 <template>
   <view className="home">
-    <u-navbar :autoBack="true" title="卡片"/>
-    <view style="margin-top: 44px;padding: 24rpx;background-color: #f8f8f8;">
+    <u-navbar :autoBack="true" title="卡片" />
+    <view style="margin-top: 44px; padding: 24rpx; background-color: #f8f8f8">
       <yl-default-card>
-        <view style="display: flex;align-items: center;gap: 20rpx;">
+        <view style="display: flex; align-items: center; gap: 20rpx">
           <yl-ellipsis
             :suffix-count="6"
             color="#999"
             size="30rpx"
             text="我是标题我是标题我是标题我是标题我是标题我是标题我是标题.pdf"
           />
-          <view style="color: red;white-space: nowrap;">删除</view>
+          <view style="color: red; white-space: nowrap">删除</view>
         </view>
-        <u-divider/>
+        <u-divider />
         <yl-ellipsis
           color="#999"
           text="我是标题我是标题我是标题我是标题我是标题我是标题我是标题.pdf"
         />
       </yl-default-card>
-      <u-divider/>
+      <u-divider />
     </view>
   </view>
 </template>
 <script>
-import YlDefaultCard from "@/components/card/yl-default-card.vue";
-import YlEllipsis from "@/components/ellipsis/yl-ellipsis.vue";
+import YlDefaultCard from '@/components/card/yl-default-card.vue'
+import YlEllipsis from '@/components/ellipsis/yl-ellipsis.vue'
 
 export default {
   components: {
     YlEllipsis,
-    YlDefaultCard
+    YlDefaultCard,
   },
   data() {
     return {}
   },
-  methods: {}
+  methods: {},
 }
 </script>
 <style scoped>

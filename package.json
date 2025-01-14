@@ -1,7 +1,10 @@
 {
   "name": "yl-uniapp-ui",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "repository": "https://github.com/caojiahai/yl-uniapp-ui.git",
+  "scripts": {
+	"format": "prettier --write \"{components,pages,libs}/**/*.{js,vue,css,json}\""
+  },
   "dependencies": {
     "dayjs": "^1.11.13",
     "lodash": "^4.17.21",
@@ -9,6 +12,7 @@
   },
   "devDependencies": {
     "sass": "^1.81.0",
-    "sass-loader": "^10.5.2"
+    "sass-loader": "^10.5.2",
+	"prettier": "^3.4.2"
   }
 }
