@@ -1,30 +1,18 @@
 <template>
   <view class="yl-count-down">
-    <view v-for="(x, index) in countDays" :key="`${index + 'day'}`" class="box">
+    <view v-for="(x, index) in countDays" :key="index" class="box">
       {{ x }}
     </view>
     <view class="text">天</view>
-    <view
-      v-for="(x, index) in countHours"
-      :key="`${index + 'hour'}`"
-      class="box"
-    >
+    <view v-for="(x, index) in countHours" :key="index" class="box">
       {{ x }}
     </view>
     <view class="text">时</view>
-    <view
-      v-for="(x, index) in countMinutes"
-      :key="`${index + 'minutes'}`"
-      class="box"
-    >
+    <view v-for="(x, index) in countMinutes" :key="index" class="box">
       {{ x }}
     </view>
     <view class="text">分</view>
-    <view
-      v-for="(x, index) in countSeconds"
-      :key="`${index + 'second'}`"
-      class="box"
-    >
+    <view v-for="(x, index) in countSeconds" :key="indexs" class="box">
       {{ x }}
     </view>
     <view class="text">秒</view>
