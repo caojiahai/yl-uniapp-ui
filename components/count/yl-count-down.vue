@@ -1,18 +1,34 @@
 <template>
   <view class="yl-count-down">
-    <view v-for="(x, index) in countDays" :key="index" class="box">
+    <view
+      v-for="(x, index) in countDays"
+      :key="handleKey(index, 'days')"
+      class="box"
+    >
       {{ x }}
     </view>
     <view class="text">天</view>
-    <view v-for="(x, index) in countHours" :key="index" class="box">
+    <view
+      v-for="(x, index) in countHours"
+      :key="handleKey(index, 'hours')"
+      class="box"
+    >
       {{ x }}
     </view>
     <view class="text">时</view>
-    <view v-for="(x, index) in countMinutes" :key="index" class="box">
+    <view
+      v-for="(x, index) in countMinutes"
+      :key="handleKey(index, 'minutes')"
+      class="box"
+    >
       {{ x }}
     </view>
     <view class="text">分</view>
-    <view v-for="(x, index) in countSeconds" :key="indexs" class="box">
+    <view
+      v-for="(x, index) in countSeconds"
+      :key="handleKey(index, 'seconds')"
+      class="box"
+    >
       {{ x }}
     </view>
     <view class="text">秒</view>
@@ -48,6 +64,9 @@ export default {
     clearInterval(this.timer)
   },
   methods: {
+    handleKey(index, type) {
+      return `${index}-${type}`
+    },
     updateCount() {
       if (!this.endTime) return false
       if (dayjs().isAfter(this.endTime)) return false
