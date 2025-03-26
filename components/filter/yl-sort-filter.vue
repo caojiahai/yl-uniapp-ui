@@ -80,6 +80,7 @@ export default {
     border-radius: 24rpx;
     color: #333333;
     width: fit-content;
+    white-space: nowrap;
   }
 }
 </style>
